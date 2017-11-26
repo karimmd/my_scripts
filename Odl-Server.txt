@@ -1,0 +1,20 @@
+First Make sure Ping is working on 209.58.189.219
+
+Second, Initiate this command to enter karaf shell
+
+ssh -p 22 root@209.58.189.219 "bash odl.sh"
+
+"The password is 12345abcde" (this is the password for that server)
+
+Karaf should initiate
+
+Then install these features under Karaf manually and wait until they all finish (It may take 9 -10 minutes)
+
+feature:install odl-restconf odl-l2switch-switch odl-mdsal-apidocs odl-dlux-all odl-openflowplugin-flow-services odl-openflowplugin-drop-test
+
+
+Finally initiate mininet to test the controller from your PC
+
+
+sudo mn --topo=single,4 --controller remote,ip=209.58.189.219,port=6633
+

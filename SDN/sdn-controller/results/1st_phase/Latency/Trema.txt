@@ -1,0 +1,17 @@
+19:17:33.599 16  switches: flows/sec:  10  10  9  10  10  10  10  9  9  9  10  10  9  10  9  10   total = 0.154000 per ms 
+19:17:34.700 16  switches: flows/sec:  11  11  11  11  11  10  10  11  10  11  11  10  11  11  11  11   total = 0.172000 per ms 
+19:17:35.800 16  switches: flows/sec:  11  11  11  11  12  11  11  11  11  12  11  11  11  11  11  11   total = 0.177998 per ms 
+19:17:36.900 16  switches: flows/sec:  11  11  11  11  11  11  11  11  11  11  11  11  11  10  11  11   total = 0.175000 per ms 
+19:17:38.000 16  switches: flows/sec:  10  11  11  11  11  11  11  11  11  11  11  11  11  11  11  11   total = 0.175000 per ms 
+19:17:39.100 16  switches: flows/sec:  11  11  11  11  11  11  11  11  12  11  11  11  11  11  11  11   total = 0.177000 per ms 
+19:17:40.200 16  switches: flows/sec:  11  11  11  11  11  11  11  11  11  11  11  11  11  11  11  11   total = 0.176000 per ms 
+19:17:41.301 16  switches: flows/sec:  11  11  11  11  11  11  11  12  11  11  11  11  11  11  11  11   total = 0.177000 per ms 
+19:17:42.401 16  switches: flows/sec:  11  11  10  11  10  11  11  11  10  10  11  11  10  11  11  11   total = 0.171000 per ms 
+19:17:43.501 16  switches: flows/sec:  11  10  11  11  11  11  10  10  11  11  10  11  11  10  11  10   total = 0.170000 per ms 
+19:17:44.601 16  switches: flows/sec:  11  11  11  11  10  10  11  10  10  10  10  11  11  11  11  10   total = 0.169000 per ms 
+19:17:45.701 16  switches: flows/sec:  10  11  10  10  10  10  11  10  10  11  10  11  10  11  11  11   total = 0.167000 per ms 
+19:17:46.802 16  switches: flows/sec:  10  10  10  11  11  11  11  10  11  11  11  10  10  11  11  11   total = 0.170000 per ms 
+19:17:47.902 16  switches: flows/sec:  11  11  11  11  12  11  11  11  11  11  11  11  11  11  11  11   total = 0.177000 per ms 
+19:17:49.002 16  switches: flows/sec:  11  11  11  11  11  11  11  11  11  11  11  11  11  11  11  11   total = 0.176000 per ms 
+19:17:50.102 16  switches: flows/sec:  11  12  11  12  11  11  11  11  11  11  11  11  11  11  11  11   total = 0.178000 per ms 
+RESULT: 16 switches 15 tests min/max/avg/stdev = 167.00/178.00/173.87/3.54 responses/s

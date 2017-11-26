@@ -1,0 +1,86 @@
+06:51:07.899 2   switches: flows/sec:  2506  2506   total = 5.011995 per ms 
+06:51:08.999 2   switches: flows/sec:  2590  2590   total = 5.179995 per ms 
+06:51:10.099 2   switches: flows/sec:  2621  2621   total = 5.241995 per ms 
+06:51:11.199 2   switches: flows/sec:  2644  2644   total = 5.287995 per ms 
+06:51:12.299 2   switches: flows/sec:  2555  2555   total = 5.109995 per ms 
+06:51:13.400 2   switches: flows/sec:  2651  2651   total = 5.301995 per ms 
+06:51:14.500 2   switches: flows/sec:  2640  2640   total = 5.279995 per ms 
+06:51:15.600 2   switches: flows/sec:  2630  2630   total = 5.259995 per ms 
+06:51:16.700 2   switches: flows/sec:  2624  2624   total = 5.247995 per ms 
+06:51:17.800 2   switches: flows/sec:  2624  2624   total = 5.247995 per ms 
+06:51:18.901 2   switches: flows/sec:  2638  2638   total = 5.275995 per ms 
+06:51:20.001 2   switches: flows/sec:  2624  2624   total = 5.247995 per ms 
+06:51:21.101 2   switches: flows/sec:  2618  2618   total = 5.235995 per ms 
+06:51:22.201 2   switches: flows/sec:  2616  2616   total = 5.231995 per ms 
+06:51:23.301 2   switches: flows/sec:  2609  2609   total = 5.217995 per ms 
+06:51:24.401 2   switches: flows/sec:  2635  2635   total = 5.269995 per ms 
+
+RESULT: 2 switches 15 tests min/max/avg/stdev = 5109.99/5301.99/5242.53/45.83 responses/s
+
+
+
+06:51:25.503 4   switches: flows/sec:  1373  1373  1373  1373   total = 5.491995 per ms 
+06:51:26.603 4   switches: flows/sec:  1363  1362  1362  1362   total = 5.448995 per ms 
+06:51:27.704 4   switches: flows/sec:  1350  1350  1350  1349   total = 5.398995 per ms 
+06:51:28.804 4   switches: flows/sec:  1370  1370  1370  1370   total = 5.479995 per ms 
+06:51:29.904 4   switches: flows/sec:  1371  1371  1371  1370   total = 5.482995 per ms 
+06:51:31.004 4   switches: flows/sec:  1375  1375  1375  1374   total = 5.498995 per ms 
+06:51:32.104 4   switches: flows/sec:  1365  1365  1365  1365   total = 5.459995 per ms 
+06:51:33.205 4   switches: flows/sec:  1372  1372  1372  1372   total = 5.487995 per ms 
+06:51:34.305 4   switches: flows/sec:  1370  1370  1370  1369   total = 5.478995 per ms 
+06:51:35.405 4   switches: flows/sec:  1379  1379  1379  1379   total = 5.515994 per ms 
+06:51:36.505 4   switches: flows/sec:  1374  1374  1374  1374   total = 5.495995 per ms 
+06:51:37.605 4   switches: flows/sec:  1440  1440  1440  1440   total = 5.759994 per ms 
+06:51:38.705 4   switches: flows/sec:  1377  1377  1377  1377   total = 5.507994 per ms 
+06:51:39.806 4   switches: flows/sec:  1369  1369  1369  1368   total = 5.474995 per ms 
+06:51:40.906 4   switches: flows/sec:  1373  1373  1373  1372   total = 5.490995 per ms 
+06:51:42.006 4   switches: flows/sec:  1369  1369  1369  1368   total = 5.474995 per ms 
+
+
+RESULT: 4 switches 15 tests min/max/avg/stdev = 5398.99/5759.99/5497.19/75.20 responses/s
+
+
+
+06:51:43.108 8   switches: flows/sec:  729  730  729  730  730  729  730  730   total = 5.836994 per ms 
+06:51:44.208 8   switches: flows/sec:  702  702  701  701  701  701  701  701   total = 5.609994 per ms 
+06:51:45.308 8   switches: flows/sec:  718  718  718  717  717  717  717  717   total = 5.738994 per ms 
+06:51:46.408 8   switches: flows/sec:  734  734  734  734  734  734  734  734   total = 5.871994 per ms 
+06:51:47.509 8   switches: flows/sec:  732  732  732  732  731  731  731  731   total = 5.851994 per ms 
+06:51:48.609 8   switches: flows/sec:  731  731  731  731  730  730  730  730   total = 5.843994 per ms 
+06:51:49.709 8   switches: flows/sec:  729  729  729  729  729  729  729  729   total = 5.831994 per ms 
+06:51:50.809 8   switches: flows/sec:  728  727  727  727  727  727  727  727   total = 5.816994 per ms 
+06:51:51.910 8   switches: flows/sec:  728  728  728  728  728  728  728  728   total = 5.823994 per ms 
+06:51:53.010 8   switches: flows/sec:  722  722  722  721  721  721  721  721   total = 5.770994 per ms 
+06:51:54.110 8   switches: flows/sec:  722  722  722  722  722  722  722  722   total = 5.775994 per ms 
+06:51:55.210 8   switches: flows/sec:  724  724  724  724  724  724  724  724   total = 5.791994 per ms 
+06:51:56.310 8   switches: flows/sec:  689  689  689  688  688  689  689  689   total = 5.509994 per ms 
+06:51:57.410 8   switches: flows/sec:  696  696  696  696  695  695  695  695   total = 5.563994 per ms 
+06:51:58.511 8   switches: flows/sec:  723  723  723  723  722  722  722  722   total = 5.779994 per ms 
+06:51:59.611 8   switches: flows/sec:  725  725  725  724  724  724  724  724   total = 5.794994 per ms 
+
+
+RESULT: 8 switches 15 tests min/max/avg/stdev = 5509.99/5871.99/5758.53/105.65 responses/s
+
+
+
+
+06:52:00.714 16  switches: flows/sec:  365  365  365  365  365  365  365  365  365  365  365  365  365  365  365  365   total = 5.839994 per ms 
+06:52:01.814 16  switches: flows/sec:  369  369  369  369  369  369  369  369  369  369  369  369  369  369  369  369   total = 5.903994 per ms 
+06:52:02.914 16  switches: flows/sec:  369  369  369  368  369  368  368  369  368  368  368  369  369  368  368  369   total = 5.895994 per ms 
+06:52:04.014 16  switches: flows/sec:  371  371  371  371  371  371  371  371  371  371  371  371  371  371  371  371   total = 5.935994 per ms 
+06:52:05.115 16  switches: flows/sec:  370  370  370  370  370  370  370  370  370  370  370  370  370  370  370  370   total = 5.919994 per ms 
+06:52:06.215 16  switches: flows/sec:  373  373  373  373  373  373  373  373  373  373  373  373  373  373  373  373   total = 5.967994 per ms 
+06:52:07.315 16  switches: flows/sec:  374  374  374  374  373  373  373  374  374  374  373  373  373  373  373  373   total = 5.974994 per ms 
+06:52:08.415 16  switches: flows/sec:  359  359  359  359  359  359  359  359  359  359  359  359  359  359  359  359   total = 5.743994 per ms 
+06:52:09.515 16  switches: flows/sec:  372  372  372  371  371  371  371  371  371  371  371  371  371  371  371  371   total = 5.938994 per ms 
+06:52:10.616 16  switches: flows/sec:  371  371  371  371  371  371  371  371  371  371  371  371  371  371  371  371   total = 5.935994 per ms 
+06:52:11.716 16  switches: flows/sec:  371  371  371  371  371  371  371  371  371  371  371  371  371  371  371  371   total = 5.935994 per ms 
+06:52:12.816 16  switches: flows/sec:  373  373  373  373  373  373  373  373  373  373  373  373  373  373  373  373   total = 5.967994 per ms 
+06:52:13.916 16  switches: flows/sec:  373  373  373  373  373  373  373  373  373  373  373  373  373  373  373  373   total = 5.967994 per ms 
+06:52:15.016 16  switches: flows/sec:  373  373  373  372  372  372  372  372  372  372  373  372  372  372  372  372   total = 5.955994 per ms 
+06:52:16.117 16  switches: flows/sec:  374  374  374  374  374  374  374  374  374  374  374  374  374  374  374  374   total = 5.983994 per ms 
+06:52:17.217 16  switches: flows/sec:  373  373  373  373  373  373  373  373  373  373  373  373  373  373  373  373   total = 5.967994 per ms 
+
+
+RESULT: 16 switches 15 tests min/max/avg/stdev = 5743.99/5983.99/5933.19/56.54 responses/s
+
