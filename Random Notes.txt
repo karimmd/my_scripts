@@ -1,0 +1,84 @@
+sudo gedit /boot/grub/grub.cfg
+
+sudo sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop
+
+sudo usermod -aG vboxusers <username>
+
+gconftool-2 --set --type string /apps/metacity/general/button_layout 'menu:minimize,maximize,close'
+
+sudo alsactl store
+
+google command   -inurl:(htm|html|php) intitle:"index of" +"last modified" +"parent directory" + ""
+
+gstreamer-properties
+
+mtr unixmen.com
+
+history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head
+
+netstat –lp --inet
+
+ls /etc/init/*.conf
+
+netstat -anltp | grep "LISTEN"     or     lsof -i -nP
+
+lsof -i -n -P | grep firefox
+
+gconftool-2 --set --type string /apps/metacity/general/mouse_button_modifier '<Super>'
+
+wget --user darren --password "$password" http://www.twitterphishr.com/hiddenstuff/secret.jpg
+
+sudo nano /etc/ssh/ssh_config
+
+sudo /etc/init.d/nscd restart
+
+df -h
+
+du -sh /var/www/example.com/
+
+sudo dmidecode | grep Product
+
+sudo traceroute -n -w 2 -q 2 -m 30 8.8.8.8
+
+gksudo gedit /usr/share/vte/termcap/xterm
+
+tar xvfz xampp-linux-1.7.7.tar.gz -C /opt
+
+sudo tar xvjf AdriX-gnome.tar.bz2 -C /usr/share/icons/ 
+
+sudo apt-get install wine --no-install-recommends
+
+sh -c "sleep 30s; conky -c ~/.conky/conkyrc_xy"
+
+http://www.skype.com/go/getskype-linux-beta-ubuntu-64
+
+sudo gedit /etc/resolv.conf
+
+/etc/default/grub
+
+sudo apt-get dist-upgrade
+
+gtk-window-decorator --replace
+
+sudo  http_proxy="http://10.22.80.250:1998" apt-get update
+
+google-chrome --enable-easy-off-store-extension-install
+
+sudo rm /var/lib/dpkg/lock
+
+sudo dpkg --configure -a
+
+sudo ntpdate time.nist.gov
+
+rm -rf ~/.wine ~/.local/share/applications/wine
+rm -f ~/.local/share/applications/wine-* ~/.local/share/applications/mimeinfo.cache
+
+ps aux | sort -nrk +4 | head
+
+sudo apt-get remove --purge libreoffice*
+
+http://download2.rapid7.com/download/NeXpose-v4/NeXposeSetup-Linux64.bin
+
+http://www.senniaokeji.com/offer/36213927178.html?spm=0.0.0.0.PsUsGF
+
+http://www.aliexpress.com/store/product/Skypix-handheld-scanner-TSN470-A02-portable-HD-1200dpi-high-speed-with-automatic-paper-feeding-scanning-Combo/629617_2029394585.html

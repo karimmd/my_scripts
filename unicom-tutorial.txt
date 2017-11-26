@@ -1,0 +1,28 @@
+Step 1: Make Sure You have Google Chrome Installed
+
+Step 2: Press F12 and Make Sure You have enabled Toogle Device Toolbar (Ctrl+Shift+M) and Change it to IPAD or anything you prefer
+
+
+Step 3: Then in the address bar type this address:
+
+114.247.41.52:808/protalAction!index.action?wlanuserip=172.16.15.53&basip=61.148.2.24
+
+
+Then If everything works then You will see the same UserName and Password Page that appairs in your mobile phone.
+
+
+Step 4: in that address you need to change "wlanuserip" according to your IP address from your system
+
+If you are using Ubuntu then type ifconfig in the terminal and see which interface you are using. If you are using Lan then you will see the IP  172.16.X.X under eth0/enps0nX. For WLAN it should be the IP of wlan0/wlanXsX.
+
+
+
+Step 5: Replace the IP and initiate the address again.
+This time again the Username and Password Page will open under the IP you provided just now.
+
+
+Step6: Now Input the username and password and if everything goes right it should establish the connection for you.
+
+
+Congratulation! You have found the trick to Use Unicom Internet under Linux OS.
+Have a good day.

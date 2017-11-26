@@ -1,0 +1,5 @@
+1) First of all run ODL contoller and run topology
+	sudo python -E topo.py
+2) Open a new terminal and run load file to do load balancing under single controller
+	sudo python -E load.py
+
