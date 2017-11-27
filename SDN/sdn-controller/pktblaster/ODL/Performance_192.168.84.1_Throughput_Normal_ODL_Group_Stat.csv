@@ -1,0 +1,5 @@
+,,,"Iteration 1",,,"Iteration 2",,,"Iteration 3",,,"Iteration 4",,,"Iteration 5"
+"Switch Group","OF Connection Time (ms)","Total Tx Packets (Packet-in) per second","Total Rx Packets (Packet-out) per second","Rx Previous Iteration Packets (Packet-out) per second","Total Tx Packets (Packet-in) per second","Total Rx Packets (Packet-out) per second","Rx Previous Iteration Packets (Packet-out) per second","Total Tx Packets (Packet-in) per second","Total Rx Packets (Packet-out) per second","Rx Previous Iteration Packets (Packet-out) per second","Total Tx Packets (Packet-in) per second","Total Rx Packets (Packet-out) per second","Rx Previous Iteration Packets (Packet-out) per second","Total Tx Packets (Packet-in) per second","Total Rx Packets (Packet-out) per second","Rx Previous Iteration Packets (Packet-out) per second",
+16 Switches,1060.525,707588,3,NA,702480,1,NA,737628,1,NA,714620,2,NA,676264,3,NA
+Summary,,707588,3,NA,702480,1,NA,737628,1,NA,714620,2,NA,676264,3,NA
+

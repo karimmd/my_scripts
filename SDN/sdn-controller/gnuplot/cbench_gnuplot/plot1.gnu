@@ -6,7 +6,7 @@ set terminal wxt size 800,600
 
 
 #set xrange [0:20]
-#set yrange [0:100000]
+#set yrange [0:400]
 
 #set xtics 0.3 2
 set xtic auto
@@ -22,7 +22,7 @@ set ylabel font ", 14"
 
 
 set xlabel "Number of Loops" offset 0,0.5
-set ylabel "Responses per Second" offset 0,0.5
+set ylabel "Responses per milliseconds(ms)" offset 0,0.5
 
 #set term eps
 #set output "output.eps"

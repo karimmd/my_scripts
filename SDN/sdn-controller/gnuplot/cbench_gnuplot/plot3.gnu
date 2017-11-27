@@ -22,7 +22,7 @@ set ylabel font ", 14"
 
 
 set xlabel "Number of Switches" offset 0,0.5
-set ylabel "Responses per Second" offset 0,0.5
+set ylabel "Responses per milliseconds(ms)" offset 0,0.5
 
 #set term eps
 #set output "output.eps"
