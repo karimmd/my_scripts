@@ -1,0 +1,561 @@
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=1 data_len=42 buffer=0x00014daf
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:38->ff:ff:ff:ff:ff:ff type0806 proto1 tos0 ttl0 ip10.0.0.38->10.0.0.13 arp_ha00:00:00:00:00:38->00:00:00:00:00:00
+00:00:00:00:00:38 > ff:ff:ff:ff:ff:ff, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.13 tell 10.0.0.38, length 28
+OFPT_PACKET_IN (xid=0x0): total_len=70 in_port=3 data_len=70 buffer=0x00014db0
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:02->00:00:00:00:00:28 type0800 proto1 tos0xc0 ttl64 ip10.0.0.2->10.0.0.28 port3->3
+00:00:00:00:00:02 > 00:00:00:00:00:28, ethertype IPv4 (0x0800), length 70: 10.0.0.2 > 10.0.0.28: ICMP 10.0.0.2 udp port 58023 unreachable, length 36
+OFPT_PACKET_IN (xid=0x0): total_len=70 in_port=3 data_len=70 buffer=0x00014db1
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:02->00:00:00:00:00:28 type0800 proto1 tos0xc0 ttl64 ip10.0.0.2->10.0.0.28 port3->3
+00:00:00:00:00:02 > 00:00:00:00:00:28, ethertype IPv4 (0x0800), length 70: 10.0.0.2 > 10.0.0.28: ICMP 10.0.0.2 udp port 58023 unreachable, length 36
+OFPT_FLOW_MOD (xid=0x7b447): ADD priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:21,nw_src=10.0.0.2,nw_dst=10.0.0.21,nw_tos=0,tp_src=12865,tp_dst=34941 idle:10 hard:30 buf:0x14dae actions=output:1
+OFPT_PACKET_OUT (xid=0x7b44c): in_port=1 actions_len=8 actions=FLOOD buffer=0x00014daf
+OFPT_PACKET_IN (xid=0x0): total_len=170 in_port=2 data_len=128 buffer=0x00014db2
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:14->00:00:00:00:00:02 type0800 proto17 tos0 ttl64 ip10.0.0.14->10.0.0.2 port48268->40606
+00:00:00:00:00:14 > 00:00:00:00:00:02, ethertype IPv4 (0x0800), length 128: truncated-ip - 42 bytes missing! 10.0.0.14.48268 > 10.0.0.2.40606: UDP, length 128
+OFPT_FLOW_MOD (xid=0x7b452): ADD priority=65535,icmp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:28,nw_src=10.0.0.2,nw_dst=10.0.0.28,nw_tos=192,icmp_type=3,icmp_code=3 idle:10 hard:30 buf:0x14db0 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b453): ADD priority=65535,icmp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:28,nw_src=10.0.0.2,nw_dst=10.0.0.28,nw_tos=192,icmp_type=3,icmp_code=3 idle:10 hard:30 buf:0x14db1 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=98 in_port=2 data_len=98 buffer=0x00014db3
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:11->00:00:00:00:00:33 type0800 proto1 tos0 ttl64 ip10.0.0.11->10.0.0.33 port8->0
+00:00:00:00:00:11 > 00:00:00:00:00:33, ethertype IPv4 (0x0800), length 98: 10.0.0.11 > 10.0.0.33: ICMP echo request, id 28813, seq 1, length 64
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=2 data_len=42 buffer=0x00014db4
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:13->00:00:00:00:00:35 type0806 proto2 tos0 ttl0 ip10.0.0.13->10.0.0.35 arp_ha00:00:00:00:00:13->00:00:00:00:00:35
+00:00:00:00:00:13 > 00:00:00:00:00:35, ethertype ARP (0x0806), length 42: Reply 10.0.0.13 is-at 00:00:00:00:00:13, length 28
+OFPT_FLOW_MOD (xid=0x7b45b): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:14,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.14,nw_dst=10.0.0.2,nw_tos=0,tp_src=48268,tp_dst=40606 idle:10 hard:30 buf:0x14db2 actions=output:3
+OFPT_FLOW_MOD (xid=0x7b465): ADD priority=65535,icmp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:11,dl_dst=00:00:00:00:00:33,nw_src=10.0.0.11,nw_dst=10.0.0.33,nw_tos=0,icmp_type=8,icmp_code=0 idle:10 hard:30 buf:0x14db3 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=74 in_port=1 data_len=74 buffer=0x00014db5
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:22->00:00:00:00:00:02 type0800 proto6 tos0 ttl64 ip10.0.0.22->10.0.0.2 port54309->12865
+00:00:00:00:00:22 > 00:00:00:00:00:02, ethertype IPv4 (0x0800), length 74: 10.0.0.22.54309 > 10.0.0.2.12865: Flags [S], seq 2817665622, win 29200, options [mss 1460,sackOK,TS val 1428011 ecr 0,nop,wscale 7], length 0
+Dec 01 18:58:51|00001|ofp_util|INFO|normalization changed ofp_match, details:
+Dec 01 18:58:51|00002|ofp_util|INFO| pre: priority=65535,arp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:13,dl_dst=00:00:00:00:00:35,nw_src=10.0.0.13,nw_dst=10.0.0.35,arp_op=2,nw_tos=0,tp_src=0,tp_dst=0
+Dec 01 18:58:51|00003|ofp_util|INFO|post: priority=65535,arp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:13,dl_dst=00:00:00:00:00:35,nw_src=10.0.0.13,nw_dst=10.0.0.35,arp_op=2
+OFPT_FLOW_MOD (xid=0x7b466): ADD priority=65535,arp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:13,dl_dst=00:00:00:00:00:35,nw_src=10.0.0.13,nw_dst=10.0.0.35,arp_op=2 idle:10 hard:30 buf:0x14db4 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=1 data_len=42 buffer=0x00014db6
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:26->ff:ff:ff:ff:ff:ff type0806 proto1 tos0 ttl0 ip10.0.0.26->10.0.0.27 arp_ha00:00:00:00:00:26->00:00:00:00:00:00
+00:00:00:00:00:26 > ff:ff:ff:ff:ff:ff, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.27 tell 10.0.0.26, length 28
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=2 data_len=42 buffer=0x00014db7
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:13->00:00:00:00:00:38 type0806 proto2 tos0 ttl0 ip10.0.0.13->10.0.0.38 arp_ha00:00:00:00:00:13->00:00:00:00:00:38
+00:00:00:00:00:13 > 00:00:00:00:00:38, ethertype ARP (0x0806), length 42: Reply 10.0.0.13 is-at 00:00:00:00:00:13, length 28
+OFPT_FLOW_MOD (xid=0x7b479): ADD priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.22,nw_dst=10.0.0.2,nw_tos=0,tp_src=54309,tp_dst=12865 idle:10 hard:30 buf:0x14db5 actions=output:3
+OFPT_PACKET_OUT (xid=0x7b47e): in_port=1 actions_len=8 actions=FLOOD buffer=0x00014db6
+OFPT_PACKET_IN (xid=0x0): total_len=170 in_port=3 data_len=128 buffer=0x00014db8
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:02->00:00:00:00:00:14 type0800 proto17 tos0 ttl64 ip10.0.0.2->10.0.0.14 port40606->48268
+00:00:00:00:00:02 > 00:00:00:00:00:14, ethertype IPv4 (0x0800), length 128: truncated-ip - 42 bytes missing! 10.0.0.2.40606 > 10.0.0.14.48268: UDP, length 128
+OFPT_PACKET_IN (xid=0x0): total_len=74 in_port=2 data_len=74 buffer=0x00014db9
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:02 type0800 proto6 tos0 ttl64 ip10.0.0.17->10.0.0.2 port40597->12865
+00:00:00:00:00:17 > 00:00:00:00:00:02, ethertype IPv4 (0x0800), length 74: 10.0.0.17.40597 > 10.0.0.2.12865: Flags [S], seq 2235594797, win 29200, options [mss 1460,sackOK,TS val 1428024 ecr 0,nop,wscale 7], length 0
+Dec 01 18:58:51|00004|ofp_util|INFO|normalization changed ofp_match, details:
+Dec 01 18:58:51|00005|ofp_util|INFO| pre: priority=65535,arp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:13,dl_dst=00:00:00:00:00:38,nw_src=10.0.0.13,nw_dst=10.0.0.38,arp_op=2,nw_tos=0,tp_src=0,tp_dst=0
+Dec 01 18:58:51|00006|ofp_util|INFO|post: priority=65535,arp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:13,dl_dst=00:00:00:00:00:38,nw_src=10.0.0.13,nw_dst=10.0.0.38,arp_op=2
+OFPT_FLOW_MOD (xid=0x7b47f): ADD priority=65535,arp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:13,dl_dst=00:00:00:00:00:38,nw_src=10.0.0.13,nw_dst=10.0.0.38,arp_op=2 idle:10 hard:30 buf:0x14db7 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b496): ADD priority=65535,udp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:14,nw_src=10.0.0.2,nw_dst=10.0.0.14,nw_tos=0,tp_src=40606,tp_dst=48268 idle:10 hard:30 buf:0x14db8 actions=output:2
+OFPT_PACKET_IN (xid=0x0): total_len=74 in_port=3 data_len=74 buffer=0x00014dba
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:02->00:00:00:00:00:22 type0800 proto6 tos0 ttl64 ip10.0.0.2->10.0.0.22 port12865->54309
+00:00:00:00:00:02 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 74: 10.0.0.2.12865 > 10.0.0.22.54309: Flags [S.], seq 2498377398, ack 2817665623, win 28960, options [mss 1460,sackOK,TS val 1428027 ecr 1428011,nop,wscale 7], length 0
+OFPT_FLOW_MOD (xid=0x7b497): ADD priority=65535,tcp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.17,nw_dst=10.0.0.2,nw_tos=0,tp_src=40597,tp_dst=12865 idle:10 hard:30 buf:0x14db9 actions=output:3
+OFPT_PACKET_IN (xid=0x0): total_len=74 in_port=1 data_len=74 buffer=0x00014dbb
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:33->00:00:00:00:00:02 type0800 proto6 tos0 ttl64 ip10.0.0.33->10.0.0.2 port60654->12865
+00:00:00:00:00:33 > 00:00:00:00:00:02, ethertype IPv4 (0x0800), length 74: 10.0.0.33.60654 > 10.0.0.2.12865: Flags [S], seq 2100902666, win 29200, options [mss 1460,sackOK,TS val 1428020 ecr 0,nop,wscale 7], length 0
+OFPT_FLOW_MOD (xid=0x7b4da): ADD priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.2,nw_dst=10.0.0.22,nw_tos=0,tp_src=12865,tp_dst=54309 idle:10 hard:30 buf:0x14dba actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=170 in_port=1 data_len=128 buffer=0x00014dbc
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:21->00:00:00:00:00:02 type0800 proto17 tos0 ttl64 ip10.0.0.21->10.0.0.2 port34260->55241
+00:00:00:00:00:21 > 00:00:00:00:00:02, ethertype IPv4 (0x0800), length 128: truncated-ip - 42 bytes missing! 10.0.0.21.34260 > 10.0.0.2.55241: UDP, length 128
+OFPT_FLOW_MOD (xid=0x7b503): ADD priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:33,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.33,nw_dst=10.0.0.2,nw_tos=0,tp_src=60654,tp_dst=12865 idle:10 hard:30 buf:0x14dbb actions=output:3
+OFPT_FLOW_MOD (xid=0x7b533): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:21,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.21,nw_dst=10.0.0.2,nw_tos=0,tp_src=34260,tp_dst=55241 idle:10 hard:30 buf:0x14dbc actions=output:3
+OFPT_PACKET_IN (xid=0x0): total_len=74 in_port=3 data_len=74 buffer=0x00014dbd
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:02->00:00:00:00:00:17 type0800 proto6 tos0 ttl64 ip10.0.0.2->10.0.0.17 port12865->40597
+00:00:00:00:00:02 > 00:00:00:00:00:17, ethertype IPv4 (0x0800), length 74: 10.0.0.2.12865 > 10.0.0.17.40597: Flags [S.], seq 3966167333, ack 2235594798, win 28960, options [mss 1460,sackOK,TS val 1428039 ecr 1428024,nop,wscale 7], length 0
+OFPT_FLOW_MOD (xid=0x7b58b): ADD priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:17,nw_src=10.0.0.2,nw_dst=10.0.0.17,nw_tos=0,tp_src=12865,tp_dst=40597 idle:10 hard:30 buf:0x14dbd actions=output:2
+OFPT_PACKET_IN (xid=0x0): total_len=74 in_port=3 data_len=74 buffer=0x00014dbe
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:02->00:00:00:00:00:33 type0800 proto6 tos0 ttl64 ip10.0.0.2->10.0.0.33 port12865->60654
+00:00:00:00:00:02 > 00:00:00:00:00:33, ethertype IPv4 (0x0800), length 74: 10.0.0.2.12865 > 10.0.0.33.60654: Flags [S.], seq 4137548784, ack 2100902667, win 28960, options [mss 1460,sackOK,TS val 1428056 ecr 1428020,nop,wscale 7], length 0
+OFPT_FLOW_MOD (xid=0x7b5e4): ADD priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:33,nw_src=10.0.0.2,nw_dst=10.0.0.33,nw_tos=0,tp_src=12865,tp_dst=60654 idle:10 hard:30 buf:0x14dbe actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=170 in_port=3 data_len=128 buffer=0x00014dbf
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:02->00:00:00:00:00:21 type0800 proto17 tos0 ttl64 ip10.0.0.2->10.0.0.21 port55241->34260
+00:00:00:00:00:02 > 00:00:00:00:00:21, ethertype IPv4 (0x0800), length 128: truncated-ip - 42 bytes missing! 10.0.0.2.55241 > 10.0.0.21.34260: UDP, length 128
+OFPT_PACKET_IN (xid=0x0): total_len=170 in_port=2 data_len=128 buffer=0x00014dc0
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:02 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.2 port34254->36373
+00:00:00:00:00:17 > 00:00:00:00:00:02, ethertype IPv4 (0x0800), length 128: truncated-ip - 42 bytes missing! 10.0.0.17.34254 > 10.0.0.2.36373: UDP, length 128
+OFPT_FLOW_MOD (xid=0x7b63e): ADD priority=65535,udp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:21,nw_src=10.0.0.2,nw_dst=10.0.0.21,nw_tos=0,tp_src=55241,tp_dst=34260 idle:10 hard:30 buf:0x14dbf actions=output:1
+OFPT_FLOW_MOD (xid=0x7b669): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.17,nw_dst=10.0.0.2,nw_tos=0,tp_src=34254,tp_dst=36373 idle:10 hard:30 buf:0x14dc0 actions=output:3
+OFPT_PACKET_IN (xid=0x0): total_len=74 in_port=2 data_len=74 buffer=0x00014dc1
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:13->00:00:00:00:00:02 type0800 proto6 tos0 ttl64 ip10.0.0.13->10.0.0.2 port52010->12865
+00:00:00:00:00:13 > 00:00:00:00:00:02, ethertype IPv4 (0x0800), length 74: 10.0.0.13.52010 > 10.0.0.2.12865: Flags [S], seq 4001724697, win 29200, options [mss 1460,sackOK,TS val 1428079 ecr 0,nop,wscale 7], length 0
+OFPT_FLOW_MOD (xid=0x7b696): ADD priority=65535,tcp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:13,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.13,nw_dst=10.0.0.2,nw_tos=0,tp_src=52010,tp_dst=12865 idle:10 hard:30 buf:0x14dc1 actions=output:3
+OFPT_PACKET_IN (xid=0x0): total_len=170 in_port=3 data_len=128 buffer=0x00014dc2
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:02->00:00:00:00:00:17 type0800 proto17 tos0 ttl64 ip10.0.0.2->10.0.0.17 port36373->34254
+00:00:00:00:00:02 > 00:00:00:00:00:17, ethertype IPv4 (0x0800), length 128: truncated-ip - 42 bytes missing! 10.0.0.2.36373 > 10.0.0.17.34254: UDP, length 128
+OFPT_FLOW_MOD (xid=0x7b702): ADD priority=65535,udp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:17,nw_src=10.0.0.2,nw_dst=10.0.0.17,nw_tos=0,tp_src=36373,tp_dst=34254 idle:10 hard:30 buf:0x14dc2 actions=output:2
+OFPT_PACKET_IN (xid=0x0): total_len=98 in_port=1 data_len=98 buffer=0x00014dc3
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:38->00:00:00:00:00:13 type0800 proto1 tos0 ttl64 ip10.0.0.38->10.0.0.13 port8->0
+00:00:00:00:00:38 > 00:00:00:00:00:13, ethertype IPv4 (0x0800), length 98: 10.0.0.38 > 10.0.0.13: ICMP echo request, id 28831, seq 1, length 64
+OFPT_PACKET_IN (xid=0x0): total_len=170 in_port=1 data_len=128 buffer=0x00014dc4
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:22->00:00:00:00:00:02 type0800 proto17 tos0 ttl64 ip10.0.0.22->10.0.0.2 port55772->59422
+00:00:00:00:00:22 > 00:00:00:00:00:02, ethertype IPv4 (0x0800), length 128: truncated-ip - 42 bytes missing! 10.0.0.22.55772 > 10.0.0.2.59422: UDP, length 128
+OFPT_PACKET_IN (xid=0x0): total_len=98 in_port=1 data_len=98 buffer=0x00014dc5
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:35->00:00:00:00:00:13 type0800 proto1 tos0 ttl64 ip10.0.0.35->10.0.0.13 port8->0
+00:00:00:00:00:35 > 00:00:00:00:00:13, ethertype IPv4 (0x0800), length 98: 10.0.0.35 > 10.0.0.13: ICMP echo request, id 28828, seq 1, length 64
+OFPT_PACKET_IN (xid=0x0): total_len=74 in_port=3 data_len=74 buffer=0x00014dc6
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:02->00:00:00:00:00:13 type0800 proto6 tos0 ttl64 ip10.0.0.2->10.0.0.13 port12865->52010
+00:00:00:00:00:02 > 00:00:00:00:00:13, ethertype IPv4 (0x0800), length 74: 10.0.0.2.12865 > 10.0.0.13.52010: Flags [S.], seq 307890638, ack 4001724698, win 28960, options [mss 1460,sackOK,TS val 1428095 ecr 1428079,nop,wscale 7], length 0
+OFPT_FLOW_MOD (xid=0x7b736): ADD priority=65535,icmp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:38,dl_dst=00:00:00:00:00:13,nw_src=10.0.0.38,nw_dst=10.0.0.13,nw_tos=0,icmp_type=8,icmp_code=0 idle:10 hard:30 buf:0x14dc3 actions=output:2
+OFPT_FLOW_MOD (xid=0x7b737): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.22,nw_dst=10.0.0.2,nw_tos=0,tp_src=55772,tp_dst=59422 idle:10 hard:30 buf:0x14dc4 actions=output:3
+OFPT_FLOW_MOD (xid=0x7b738): ADD priority=65535,icmp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:35,dl_dst=00:00:00:00:00:13,nw_src=10.0.0.35,nw_dst=10.0.0.13,nw_tos=0,icmp_type=8,icmp_code=0 idle:10 hard:30 buf:0x14dc5 actions=output:2
+OFPT_PACKET_IN (xid=0x0): total_len=98 in_port=1 data_len=98 buffer=0x00014dc7
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:33->00:00:00:00:00:11 type0800 proto1 tos0 ttl64 ip10.0.0.33->10.0.0.11
+00:00:00:00:00:33 > 00:00:00:00:00:11, ethertype IPv4 (0x0800), length 98: 10.0.0.33 > 10.0.0.11: ICMP echo reply, id 28813, seq 1, length 64
+OFPT_FLOW_MOD (xid=0x7b766): ADD priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:13,nw_src=10.0.0.2,nw_dst=10.0.0.13,nw_tos=0,tp_src=12865,tp_dst=52010 idle:10 hard:30 buf:0x14dc6 actions=output:2
+OFPT_PACKET_IN (xid=0x0): total_len=74 in_port=2 data_len=74 buffer=0x00014dc8
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto6 tos0 ttl64 ip10.0.0.17->10.0.0.22 port42784->12865
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 74: 10.0.0.17.42784 > 10.0.0.22.12865: Flags [S], seq 556496545, win 29200, options [mss 1460,sackOK,TS val 1428113 ecr 0,nop,wscale 7], length 0
+OFPT_FLOW_MOD (xid=0x7b767): ADD priority=65535,icmp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:33,dl_dst=00:00:00:00:00:11,nw_src=10.0.0.33,nw_dst=10.0.0.11,nw_tos=0,icmp_type=0,icmp_code=0 idle:10 hard:30 buf:0x14dc7 actions=output:2
+OFPT_PACKET_IN (xid=0x0): total_len=98 in_port=2 data_len=98 buffer=0x00014dc9
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:13->00:00:00:00:00:38 type0800 proto1 tos0 ttl64 ip10.0.0.13->10.0.0.38
+00:00:00:00:00:13 > 00:00:00:00:00:38, ethertype IPv4 (0x0800), length 98: 10.0.0.13 > 10.0.0.38: ICMP echo reply, id 28831, seq 1, length 64
+OFPT_FLOW_MOD (xid=0x7b799): ADD priority=65535,tcp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=42784,tp_dst=12865 idle:10 hard:30 buf:0x14dc8 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=74 in_port=1 data_len=74 buffer=0x00014dca
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:23->00:00:00:00:00:02 type0800 proto6 tos0 ttl64 ip10.0.0.23->10.0.0.2 port36088->12865
+00:00:00:00:00:23 > 00:00:00:00:00:02, ethertype IPv4 (0x0800), length 74: 10.0.0.23.36088 > 10.0.0.2.12865: Flags [S], seq 1959098001, win 29200, options [mss 1460,sackOK,TS val 1428106 ecr 0,nop,wscale 7], length 0
+OFPT_FLOW_MOD (xid=0x7b7c6): ADD priority=65535,icmp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:13,dl_dst=00:00:00:00:00:38,nw_src=10.0.0.13,nw_dst=10.0.0.38,nw_tos=0,icmp_type=0,icmp_code=0 idle:10 hard:30 buf:0x14dc9 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=170 in_port=3 data_len=128 buffer=0x00014dcb
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:02->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.2->10.0.0.22 port59422->55772
+00:00:00:00:00:02 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 42 bytes missing! 10.0.0.2.59422 > 10.0.0.22.55772: UDP, length 128
+OFPT_FLOW_MOD (xid=0x7b7f4): ADD priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:23,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.23,nw_dst=10.0.0.2,nw_tos=0,tp_src=36088,tp_dst=12865 idle:10 hard:30 buf:0x14dca actions=output:3
+OFPT_PACKET_IN (xid=0x0): total_len=170 in_port=2 data_len=128 buffer=0x00014dcc
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:13->00:00:00:00:00:02 type0800 proto17 tos0 ttl64 ip10.0.0.13->10.0.0.2 port46221->57514
+00:00:00:00:00:13 > 00:00:00:00:00:02, ethertype IPv4 (0x0800), length 128: truncated-ip - 42 bytes missing! 10.0.0.13.46221 > 10.0.0.2.57514: UDP, length 128
+OFPT_PACKET_IN (xid=0x0): total_len=98 in_port=2 data_len=98 buffer=0x00014dcd
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:13->00:00:00:00:00:35 type0800 proto1 tos0 ttl64 ip10.0.0.13->10.0.0.35
+00:00:00:00:00:13 > 00:00:00:00:00:35, ethertype IPv4 (0x0800), length 98: 10.0.0.13 > 10.0.0.35: ICMP echo reply, id 28828, seq 1, length 64
+OFPT_FLOW_MOD (xid=0x7b811): ADD priority=65535,udp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.2,nw_dst=10.0.0.22,nw_tos=0,tp_src=59422,tp_dst=55772 idle:10 hard:30 buf:0x14dcb actions=output:1
+OFPT_FLOW_MOD (xid=0x7b823): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:13,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.13,nw_dst=10.0.0.2,nw_tos=0,tp_src=46221,tp_dst=57514 idle:10 hard:30 buf:0x14dcc actions=output:3
+OFPT_PACKET_IN (xid=0x0): total_len=74 in_port=1 data_len=74 buffer=0x00014dce
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:27->00:00:00:00:00:02 type0800 proto6 tos0 ttl64 ip10.0.0.27->10.0.0.2 port49745->12865
+00:00:00:00:00:27 > 00:00:00:00:00:02, ethertype IPv4 (0x0800), length 74: 10.0.0.27.49745 > 10.0.0.2.12865: Flags [S], seq 2098207158, win 29200, options [mss 1460,sackOK,TS val 1428115 ecr 0,nop,wscale 7], length 0
+OFPT_FLOW_MOD (xid=0x7b824): ADD priority=65535,icmp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:13,dl_dst=00:00:00:00:00:35,nw_src=10.0.0.13,nw_dst=10.0.0.35,nw_tos=0,icmp_type=0,icmp_code=0 idle:10 hard:30 buf:0x14dcd actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=170 in_port=1 data_len=128 buffer=0x00014dcf
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:33->00:00:00:00:00:02 type0800 proto17 tos0 ttl64 ip10.0.0.33->10.0.0.2 port33184->58298
+00:00:00:00:00:33 > 00:00:00:00:00:02, ethertype IPv4 (0x0800), length 128: truncated-ip - 42 bytes missing! 10.0.0.33.33184 > 10.0.0.2.58298: UDP, length 128
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=1 data_len=42 buffer=0x00014dd0
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:32->ff:ff:ff:ff:ff:ff type0806 proto1 tos0 ttl0 ip10.0.0.32->10.0.0.29 arp_ha00:00:00:00:00:32->00:00:00:00:00:00
+00:00:00:00:00:32 > ff:ff:ff:ff:ff:ff, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.29 tell 10.0.0.32, length 28
+OFPT_PACKET_IN (xid=0x0): total_len=74 in_port=3 data_len=74 buffer=0x00014dd1
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:02->00:00:00:00:00:23 type0800 proto6 tos0 ttl64 ip10.0.0.2->10.0.0.23 port12865->36088
+00:00:00:00:00:02 > 00:00:00:00:00:23, ethertype IPv4 (0x0800), length 74: 10.0.0.2.12865 > 10.0.0.23.36088: Flags [S.], seq 747105699, ack 1959098002, win 28960, options [mss 1460,sackOK,TS val 1428138 ecr 1428106,nop,wscale 7], length 0
+OFPT_FLOW_MOD (xid=0x7b834): ADD priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:27,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.27,nw_dst=10.0.0.2,nw_tos=0,tp_src=49745,tp_dst=12865 idle:10 hard:30 buf:0x14dce actions=output:3
+OFPT_FLOW_MOD (xid=0x7b85b): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:33,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.33,nw_dst=10.0.0.2,nw_tos=0,tp_src=33184,tp_dst=58298 idle:10 hard:30 buf:0x14dcf actions=output:3
+OFPT_PACKET_IN (xid=0x0): total_len=170 in_port=3 data_len=128 buffer=0x00014dd2
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:02->00:00:00:00:00:13 type0800 proto17 tos0 ttl64 ip10.0.0.2->10.0.0.13 port57514->46221
+00:00:00:00:00:02 > 00:00:00:00:00:13, ethertype IPv4 (0x0800), length 128: truncated-ip - 42 bytes missing! 10.0.0.2.57514 > 10.0.0.13.46221: UDP, length 128
+OFPT_PACKET_OUT (xid=0x7b85c): in_port=1 actions_len=8 actions=FLOOD buffer=0x00014dd0
+OFPT_FLOW_MOD (xid=0x7b85e): ADD priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:23,nw_src=10.0.0.2,nw_dst=10.0.0.23,nw_tos=0,tp_src=12865,tp_dst=36088 idle:10 hard:30 buf:0x14dd1 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=1 data_len=42 buffer=0x00014dd3
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:36->ff:ff:ff:ff:ff:ff type0806 proto1 tos0 ttl0 ip10.0.0.36->10.0.0.28 arp_ha00:00:00:00:00:36->00:00:00:00:00:00
+00:00:00:00:00:36 > ff:ff:ff:ff:ff:ff, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.28 tell 10.0.0.36, length 28
+OFPT_FLOW_MOD (xid=0x7b865): ADD priority=65535,udp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:13,nw_src=10.0.0.2,nw_dst=10.0.0.13,nw_tos=0,tp_src=57514,tp_dst=46221 idle:10 hard:30 buf:0x14dd2 actions=output:2
+OFPT_PACKET_IN (xid=0x0): total_len=74 in_port=3 data_len=74 buffer=0x00014dd4
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:02->00:00:00:00:00:27 type0800 proto6 tos0 ttl64 ip10.0.0.2->10.0.0.27 port12865->49745
+00:00:00:00:00:02 > 00:00:00:00:00:27, ethertype IPv4 (0x0800), length 74: 10.0.0.2.12865 > 10.0.0.27.49745: Flags [S.], seq 1387640741, ack 2098207159, win 28960, options [mss 1460,sackOK,TS val 1428150 ecr 1428115,nop,wscale 7], length 0
+OFPT_PACKET_OUT (xid=0x7b867): in_port=1 actions_len=8 actions=FLOOD buffer=0x00014dd3
+OFPT_PACKET_IN (xid=0x0): total_len=170 in_port=3 data_len=128 buffer=0x00014dd5
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:02->00:00:00:00:00:33 type0800 proto17 tos0 ttl64 ip10.0.0.2->10.0.0.33 port58298->33184
+00:00:00:00:00:02 > 00:00:00:00:00:33, ethertype IPv4 (0x0800), length 128: truncated-ip - 42 bytes missing! 10.0.0.2.58298 > 10.0.0.33.33184: UDP, length 128
+OFPT_FLOW_MOD (xid=0x7b871): ADD priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:27,nw_src=10.0.0.2,nw_dst=10.0.0.27,nw_tos=0,tp_src=12865,tp_dst=49745 idle:10 hard:30 buf:0x14dd4 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=98 in_port=3 data_len=98 buffer=0x00014dd6
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:10->00:00:00:00:00:33 type0800 proto1 tos0 ttl64 ip10.0.0.10->10.0.0.33 port8->0
+00:00:00:00:00:10 > 00:00:00:00:00:33, ethertype IPv4 (0x0800), length 98: 10.0.0.10 > 10.0.0.33: ICMP echo request, id 29114, seq 1, length 64
+OFPT_FLOW_MOD (xid=0x7b875): ADD priority=65535,udp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:33,nw_src=10.0.0.2,nw_dst=10.0.0.33,nw_tos=0,tp_src=58298,tp_dst=33184 idle:10 hard:30 buf:0x14dd5 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=74 in_port=1 data_len=74 buffer=0x00014dd7
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:22->00:00:00:00:00:17 type0800 proto6 tos0 ttl64 ip10.0.0.22->10.0.0.17 port12865->42784
+00:00:00:00:00:22 > 00:00:00:00:00:17, ethertype IPv4 (0x0800), length 74: 10.0.0.22.12865 > 10.0.0.17.42784: Flags [S.], seq 2783991907, ack 556496546, win 28960, options [mss 1460,sackOK,TS val 1428141 ecr 1428113,nop,wscale 7], length 0
+OFPT_FLOW_MOD (xid=0x7b889): ADD priority=65535,icmp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:10,dl_dst=00:00:00:00:00:33,nw_src=10.0.0.10,nw_dst=10.0.0.33,nw_tos=0,icmp_type=8,icmp_code=0 idle:10 hard:30 buf:0x14dd6 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=1 data_len=42 buffer=0x00014dd8
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:38->00:00:00:00:00:16 type0806 proto1 tos0 ttl0 ip10.0.0.38->10.0.0.16 arp_ha00:00:00:00:00:38->00:00:00:00:00:00
+00:00:00:00:00:38 > 00:00:00:00:00:16, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.16 tell 10.0.0.38, length 28
+OFPT_FLOW_MOD (xid=0x7b88a): ADD priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:17,nw_src=10.0.0.22,nw_dst=10.0.0.17,nw_tos=0,tp_src=12865,tp_dst=42784 idle:10 hard:30 buf:0x14dd7 actions=output:2
+OFPT_PACKET_IN (xid=0x0): total_len=170 in_port=1 data_len=128 buffer=0x00014dd9
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:23->00:00:00:00:00:02 type0800 proto17 tos0 ttl64 ip10.0.0.23->10.0.0.2 port59291->42138
+00:00:00:00:00:23 > 00:00:00:00:00:02, ethertype IPv4 (0x0800), length 128: truncated-ip - 42 bytes missing! 10.0.0.23.59291 > 10.0.0.2.42138: UDP, length 128
+Dec 01 18:58:51|00007|ofp_util|INFO|normalization changed ofp_match, details:
+Dec 01 18:58:51|00008|ofp_util|INFO| pre: priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:38,dl_dst=00:00:00:00:00:16,nw_src=10.0.0.38,nw_dst=10.0.0.16,arp_op=1,nw_tos=0,icmp_type=0,icmp_code=0
+Dec 01 18:58:51|00009|ofp_util|INFO|post: priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:38,dl_dst=00:00:00:00:00:16,nw_src=10.0.0.38,nw_dst=10.0.0.16,arp_op=1
+OFPT_FLOW_MOD (xid=0x7b894): ADD priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:38,dl_dst=00:00:00:00:00:16,nw_src=10.0.0.38,nw_dst=10.0.0.16,arp_op=1 idle:10 hard:30 buf:0x14dd8 actions=output:2
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014dda
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014ddb
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014ddc
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014ddd
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014dde
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014ddf
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014de0
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014de1
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014de2
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014de3
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014de4
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014de5
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014de6
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014de7
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(first) port47759->48138
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17.47759 > 10.0.0.22.48138: UDP, length 65507
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014de8
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(first) port47759->48138
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17.47759 > 10.0.0.22.48138: UDP, length 65507
+OFPT_FLOW_MOD (xid=0x7b8a8): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:23,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.23,nw_dst=10.0.0.2,nw_tos=0,tp_src=59291,tp_dst=42138 idle:10 hard:30 buf:0x14dd9 actions=output:3
+OFPT_FLOW_MOD (xid=0x7b8cf): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14dda actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=74 in_port=1 data_len=74 buffer=0x00014de9
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:40->00:00:00:00:00:02 type0800 proto6 tos0 ttl64 ip10.0.0.40->10.0.0.2 port43566->12865
+00:00:00:00:00:40 > 00:00:00:00:00:02, ethertype IPv4 (0x0800), length 74: 10.0.0.40.43566 > 10.0.0.2.12865: Flags [S], seq 2620791477, win 29200, options [mss 1460,sackOK,TS val 1428168 ecr 0,nop,wscale 7], length 0
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014dea
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014deb
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014dec
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014ded
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014dee
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014def
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014df0
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014df1
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014df2
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014df3
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014df4
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014df5
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014df6
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014df7
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014df8
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014df9
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014dfa
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014dfb
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014dfc
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014dfd
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014dfe
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014dff
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e00
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e01
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e02
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e03
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e04
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_FLOW_MOD (xid=0x7b8d0): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14ddb actions=output:1
+OFPT_FLOW_MOD (xid=0x7b8d1): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14ddc actions=output:1
+OFPT_FLOW_MOD (xid=0x7b8d2): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14ddd actions=output:1
+OFPT_FLOW_MOD (xid=0x7b8d3): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14dde actions=output:1
+OFPT_FLOW_MOD (xid=0x7b8d4): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14ddf actions=output:1
+OFPT_FLOW_MOD (xid=0x7b8d5): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14de0 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b8d6): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14de1 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b8d7): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14de2 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b8d8): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14de3 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b8d9): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14de4 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b8da): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14de5 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b8db): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14de6 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b8ef): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=47759,tp_dst=48138 idle:10 hard:30 buf:0x14de7 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b8f0): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=47759,tp_dst=48138 idle:10 hard:30 buf:0x14de8 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b8f1): ADD priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:40,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.40,nw_dst=10.0.0.2,nw_tos=0,tp_src=43566,tp_dst=12865 idle:10 hard:30 buf:0x14de9 actions=output:3
+OFPT_PACKET_IN (xid=0x0): total_len=74 in_port=1 data_len=74 buffer=0x00014e05
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:24->00:00:00:00:00:02 type0800 proto6 tos0 ttl64 ip10.0.0.24->10.0.0.2 port46378->12865
+00:00:00:00:00:24 > 00:00:00:00:00:02, ethertype IPv4 (0x0800), length 74: 10.0.0.24.46378 > 10.0.0.2.12865: Flags [S], seq 834793210, win 29200, options [mss 1460,sackOK,TS val 1428175 ecr 0,nop,wscale 7], length 0
+OFPT_FLOW_MOD (xid=0x7b907): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14dea actions=output:1
+OFPT_FLOW_MOD (xid=0x7b908): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14deb actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e06
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e07
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e08
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=429 in_port=2 data_len=128 buffer=0x00014e09
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 301 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e0a
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e0b
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e0c
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e0d
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e0e
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e0f
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e10
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e11
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e12
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e13
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e14
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_FLOW_MOD (xid=0x7b909): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14dec actions=output:1
+OFPT_FLOW_MOD (xid=0x7b90a): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14ded actions=output:1
+OFPT_FLOW_MOD (xid=0x7b90b): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14dee actions=output:1
+OFPT_FLOW_MOD (xid=0x7b90c): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14def actions=output:1
+OFPT_FLOW_MOD (xid=0x7b90d): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14df0 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b90e): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14df1 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b90f): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14df2 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b910): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14df3 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b911): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14df4 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b912): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14df5 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b913): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14df6 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b914): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14df7 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b936): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14df8 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=170 in_port=1 data_len=128 buffer=0x00014e15
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:27->00:00:00:00:00:02 type0800 proto17 tos0 ttl64 ip10.0.0.27->10.0.0.2 port35113->34069
+00:00:00:00:00:27 > 00:00:00:00:00:02, ethertype IPv4 (0x0800), length 128: truncated-ip - 42 bytes missing! 10.0.0.27.35113 > 10.0.0.2.34069: UDP, length 128
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e16
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e17
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e18
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e19
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e1a
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e1b
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e1c
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e1d
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e1e
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e1f
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e20
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e21
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e22
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e23
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e24
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e25
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e26
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e27
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e28
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e29
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e2a
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=170 in_port=3 data_len=128 buffer=0x00014e2b
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:02->00:00:00:00:00:23 type0800 proto17 tos0 ttl64 ip10.0.0.2->10.0.0.23 port42138->59291
+00:00:00:00:00:02 > 00:00:00:00:00:23, ethertype IPv4 (0x0800), length 128: truncated-ip - 42 bytes missing! 10.0.0.2.42138 > 10.0.0.23.59291: UDP, length 128
+OFPT_FLOW_MOD (xid=0x7b937): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14df9 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b938): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14dfa actions=output:1
+OFPT_FLOW_MOD (xid=0x7b939): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14dfb actions=output:1
+OFPT_FLOW_MOD (xid=0x7b93a): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14dfc actions=output:1
+OFPT_FLOW_MOD (xid=0x7b93b): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14dfd actions=output:1
+OFPT_FLOW_MOD (xid=0x7b93c): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14dfe actions=output:1
+OFPT_FLOW_MOD (xid=0x7b93d): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14dff actions=output:1
+OFPT_FLOW_MOD (xid=0x7b93e): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14e00 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b93f): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14e01 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b940): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14e02 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b941): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14e03 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b942): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14e04 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b943): ADD priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:24,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.24,nw_dst=10.0.0.2,nw_tos=0,tp_src=46378,tp_dst=12865 idle:10 hard:30 buf:0x14e05 actions=output:3
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=1 data_len=42 buffer=0x00014e2c
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:33->ff:ff:ff:ff:ff:ff type0806 proto1 tos0 ttl0 ip10.0.0.33->10.0.0.10 arp_ha00:00:00:00:00:33->00:00:00:00:00:00
+00:00:00:00:00:33 > ff:ff:ff:ff:ff:ff, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.10 tell 10.0.0.33, length 28
+OFPT_FLOW_MOD (xid=0x7b96a): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14e06 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b96b): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14e07 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b96c): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14e08 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b96d): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 idle:10 hard:30 buf:0x14e09 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b96e): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 idle:10 hard:30 buf:0x14e0a actions=output:1
+OFPT_FLOW_MOD (xid=0x7b96f): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 idle:10 hard:30 buf:0x14e0b actions=output:1
+OFPT_FLOW_MOD (xid=0x7b970): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 idle:10 hard:30 buf:0x14e0c actions=output:1
+OFPT_FLOW_MOD (xid=0x7b971): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 idle:10 hard:30 buf:0x14e0d actions=output:1
+OFPT_FLOW_MOD (xid=0x7b972): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 idle:10 hard:30 buf:0x14e0e actions=output:1
+OFPT_FLOW_MOD (xid=0x7b973): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 idle:10 hard:30 buf:0x14e0f actions=output:1
+OFPT_FLOW_MOD (xid=0x7b974): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 idle:10 hard:30 buf:0x14e10 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b975): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 idle:10 hard:30 buf:0x14e11 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b976): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 idle:10 hard:30 buf:0x14e12 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b977): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 idle:10 hard:30 buf:0x14e13 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=74 in_port=3 data_len=74 buffer=0x00014e2d
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:02->00:00:00:00:00:40 type0800 proto6 tos0 ttl64 ip10.0.0.2->10.0.0.40 port12865->43566
+00:00:00:00:00:02 > 00:00:00:00:00:40, ethertype IPv4 (0x0800), length 74: 10.0.0.2.12865 > 10.0.0.40.43566: Flags [S.], seq 3793862460, ack 2620791478, win 28960, options [mss 1460,sackOK,TS val 1428203 ecr 1428168,nop,wscale 7], length 0
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=3 data_len=42 buffer=0x00014e2e
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:08->ff:ff:ff:ff:ff:ff type0806 proto1 tos0 ttl0 ip10.0.0.8->10.0.0.12 arp_ha00:00:00:00:00:08->00:00:00:00:00:00
+00:00:00:00:00:08 > ff:ff:ff:ff:ff:ff, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.12 tell 10.0.0.8, length 28
+OFPT_FLOW_MOD (xid=0x7b998): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 idle:10 hard:30 buf:0x14e14 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b999): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:27,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.27,nw_dst=10.0.0.2,nw_tos=0,tp_src=35113,tp_dst=34069 idle:10 hard:30 buf:0x14e15 actions=output:3
+OFPT_FLOW_MOD (xid=0x7b99a): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 idle:10 hard:30 buf:0x14e16 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b99b): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 idle:10 hard:30 buf:0x14e17 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b99c): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 idle:10 hard:30 buf:0x14e18 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b99d): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 idle:10 hard:30 buf:0x14e19 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b99e): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 idle:10 hard:30 buf:0x14e1a actions=output:1
+OFPT_FLOW_MOD (xid=0x7b99f): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 idle:10 hard:30 buf:0x14e1b actions=output:1
+OFPT_FLOW_MOD (xid=0x7b9a0): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 idle:10 hard:30 buf:0x14e1c actions=output:1
+OFPT_FLOW_MOD (xid=0x7b9a1): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 idle:10 hard:30 buf:0x14e1d actions=output:1
+OFPT_FLOW_MOD (xid=0x7b9a2): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 idle:10 hard:30 buf:0x14e1e actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=2 data_len=42 buffer=0x00014e2f
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:16->00:00:00:00:00:38 type0806 proto2 tos0 ttl0 ip10.0.0.16->10.0.0.38 arp_ha00:00:00:00:00:16->00:00:00:00:00:38
+00:00:00:00:00:16 > 00:00:00:00:00:38, ethertype ARP (0x0806), length 42: Reply 10.0.0.16 is-at 00:00:00:00:00:16, length 28
+OFPT_PACKET_IN (xid=0x0): total_len=74 in_port=2 data_len=74 buffer=0x00014e30
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:19->00:00:00:00:00:02 type0800 proto6 tos0 ttl64 ip10.0.0.19->10.0.0.2 port44398->12865
+00:00:00:00:00:19 > 00:00:00:00:00:02, ethertype IPv4 (0x0800), length 74: 10.0.0.19.44398 > 10.0.0.2.12865: Flags [S], seq 936358948, win 29200, options [mss 1460,sackOK,TS val 1428185 ecr 0,nop,wscale 7], length 0
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e31
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e32
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e33
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e34
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e35
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e36
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e37
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e38
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e39
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e3a
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=2 data_len=128 buffer=0x00014e3b
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=429 in_port=2 data_len=128 buffer=0x00014e3c
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:17->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.17->10.0.0.22 frag(later)
+00:00:00:00:00:17 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 301 bytes missing! 10.0.0.17 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=74 in_port=2 data_len=74 buffer=0x00014e3d
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:20->00:00:00:00:00:02 type0800 proto6 tos0 ttl64 ip10.0.0.20->10.0.0.2 port42364->12865
+00:00:00:00:00:20 > 00:00:00:00:00:02, ethertype IPv4 (0x0800), length 74: 10.0.0.20.42364 > 10.0.0.2.12865: Flags [S], seq 3178150153, win 29200, options [mss 1460,sackOK,TS val 1428185 ecr 0,nop,wscale 7], length 0
+OFPT_PACKET_IN (xid=0x0): total_len=74 in_port=2 data_len=74 buffer=0x00014e3e
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:18->00:00:00:00:00:02 type0800 proto6 tos0 ttl64 ip10.0.0.18->10.0.0.2 port48284->12865
+00:00:00:00:00:18 > 00:00:00:00:00:02, ethertype IPv4 (0x0800), length 74: 10.0.0.18.48284 > 10.0.0.2.12865: Flags [S], seq 3748715602, win 29200, options [mss 1460,sackOK,TS val 1428203 ecr 0,nop,wscale 7], length 0
+OFPT_PACKET_IN (xid=0x0): total_len=74 in_port=2 data_len=74 buffer=0x00014e3f
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:12->00:00:00:00:00:02 type0800 proto6 tos0 ttl64 ip10.0.0.12->10.0.0.2 port54004->12865
+00:00:00:00:00:12 > 00:00:00:00:00:02, ethertype IPv4 (0x0800), length 74: 10.0.0.12.54004 > 10.0.0.2.12865: Flags [S], seq 1767965196, win 29200, options [mss 1460,sackOK,TS val 1428190 ecr 0,nop,wscale 7], length 0
+OFPT_FLOW_MOD (xid=0x7b9a3): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 idle:10 hard:30 buf:0x14e1f actions=output:1
+OFPT_FLOW_MOD (xid=0x7b9a4): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 idle:10 hard:30 buf:0x14e20 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b9a5): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 idle:10 hard:30 buf:0x14e21 actions=output:1
+OFPT_FLOW_MOD (xid=0x7b9d6): ADD priority=65535,udp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.17,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 idle:10 hard:30 buf:0x14e22 actions=output:1

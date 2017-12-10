@@ -1,0 +1,20 @@
+rm: cannot remove `vswitchd_restart.log': No such file or directory
+gh4 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.4 &
+gh7 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.7 &
+gh9 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.9 &
+gh10 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.10 &
+gh13 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.13 &
+gh16 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.16 &
+gh17 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.17 &
+gh24 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.24 &
+gh26 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.26 &
+gh27 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.27 &
+gh28 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.28 &
+gh30 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.30 &
+gh33 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.33 &
+gh34 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.34 &
+gh35 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.35 &
+gh36 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.36 &
+gh38 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.38 &
+gh37 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.37 &
+gh40 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.40 &

@@ -1,0 +1,15 @@
+OFPT_PACKET_IN (xid=0x0): total_len=74 in_port=11 data_len=74 (unbuffered)
+priority0:tunnel0:in_port000b:tci(0) mac00:00:00:00:00:20->00:00:00:00:00:07 type0800 proto6 tos0 ttl64 ip10.0.0.20->10.0.0.7 port35313->37195
+00:00:00:00:00:20 > 00:00:00:00:00:07, ethertype IPv4 (0x0800), length 74: 10.0.0.20.35313 > 10.0.0.7.37195: Flags [S], seq 3938372272, win 29200, options [mss 1460,sackOK,TS val 1623070 ecr 0,nop,wscale 7], length 0
+OFPT_FLOW_MOD (xid=0x40c1c): ADD priority=1,tcp,in_port=11,dl_src=00:00:00:00:00:20,dl_dst=00:00:00:00:00:07,nw_src=10.0.0.20,nw_dst=10.0.0.7,tp_src=35313,tp_dst=37195 cookie:0x2002391b000000 idle:5 actions=output:1
+OFPT_PACKET_OUT (xid=0x40c1d): in_port=11 actions_len=8 actions=output:1 data_len=74
+00:00:00:00:00:20 > 00:00:00:00:00:07, ethertype IPv4 (0x0800), length 74: 10.0.0.20.35313 > 10.0.0.7.37195: Flags [S], seq 3938372272, win 29200, options [mss 1460,sackOK,TS val 1623070 ecr 0,nop,wscale 7], length 0
+
+OFPT_FLOW_MOD (xid=0x40c24): ADD priority=1,tcp,in_port=1,dl_src=00:00:00:00:00:07,dl_dst=00:00:00:00:00:20,nw_src=10.0.0.7,nw_dst=10.0.0.20,tp_src=37195,tp_dst=35313 cookie:0x2002391c000000 idle:5 actions=output:11
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=10 data_len=42 (unbuffered)
+priority0:tunnel0:in_port000a:tci(0) mac00:00:00:00:00:19->00:00:00:00:00:16 type0806 proto2 tos0 ttl0 ip10.0.0.19->10.0.0.16 arp_ha00:00:00:00:00:19->00:00:00:00:00:16
+00:00:00:00:00:19 > 00:00:00:00:00:16, ethertype ARP (0x0806), length 42: Reply 10.0.0.19 is-at 00:00:00:00:00:19, length 28
+OFPT_FLOW_MOD (xid=0x40c2f): ADD priority=1,arp,in_port=10,dl_src=00:00:00:00:00:19,dl_dst=00:00:00:00:00:16 cookie:0x2002391d000000 idle:5 actions=output:7
+OFPT_PACKET_OUT (xid=0x40c30): in_port=10 actions_len=8 actions=output:7 data_len=42
+00:00:00:00:00:19 > 00:00:00:00:00:16, ethertype ARP (0x0806), length 42: Reply 10.0.0.19 is-at 00:00:00:00:00:19, length 28
+

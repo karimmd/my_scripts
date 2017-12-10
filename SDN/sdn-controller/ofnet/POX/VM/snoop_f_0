@@ -1,0 +1,227 @@
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x00016f87
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:03->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.3->224.0.0.22
+00:00:00:00:00:03 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.3 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x00016f88
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:04->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.4->224.0.0.22
+00:00:00:00:00:04 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.4 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x702df): in_port=1 actions_len=8 actions=FLOOD buffer=0x00016f87
+OFPT_PACKET_OUT (xid=0x702e0): in_port=1 actions_len=8 actions=FLOOD buffer=0x00016f88
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x00016f89
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:08->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.8->224.0.0.22
+00:00:00:00:00:08 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.8 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x702ec): in_port=1 actions_len=8 actions=FLOOD buffer=0x00016f89
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x00016f8a
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:05->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.5->224.0.0.22
+00:00:00:00:00:05 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.5 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x702f0): in_port=1 actions_len=8 actions=FLOOD buffer=0x00016f8a
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x00016f8b
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:10->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.10->224.0.0.22
+00:00:00:00:00:10 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.10 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x702f3): in_port=1 actions_len=8 actions=FLOOD buffer=0x00016f8b
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x00016f8c
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:09->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.9->224.0.0.22
+00:00:00:00:00:09 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.9 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x702fe): in_port=1 actions_len=8 actions=FLOOD buffer=0x00016f8c
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x00016f8d
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:13->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.13->224.0.0.22
+00:00:00:00:00:13 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.13 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x70309): in_port=1 actions_len=8 actions=FLOOD buffer=0x00016f8d
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=1 data_len=42 buffer=0x00016f8e
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:03->00:00:00:00:00:24 type0806 proto1 tos0 ttl0 ip10.0.0.3->10.0.0.24 arp_ha00:00:00:00:00:03->00:00:00:00:00:00
+00:00:00:00:00:03 > 00:00:00:00:00:24, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.24 tell 10.0.0.3, length 28
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=7 data_len=54 buffer=0x00016f8f
+priority0:tunnel0:in_port0007:tci(0) mac00:00:00:00:00:26->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.26->224.0.0.22
+00:00:00:00:00:26 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.26 > 224.0.0.22: igmp v3 report, 1 group record(s)
+Dec 01 23:31:15|00001|ofp_util|INFO|normalization changed ofp_match, details:
+Dec 01 23:31:15|00002|ofp_util|INFO| pre: priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:03,dl_dst=00:00:00:00:00:24,nw_src=10.0.0.3,nw_dst=10.0.0.24,arp_op=1,nw_tos=0,icmp_type=0,icmp_code=0
+Dec 01 23:31:15|00003|ofp_util|INFO|post: priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:03,dl_dst=00:00:00:00:00:24,nw_src=10.0.0.3,nw_dst=10.0.0.24,arp_op=1
+OFPT_FLOW_MOD (xid=0x70310): ADD priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:03,dl_dst=00:00:00:00:00:24,nw_src=10.0.0.3,nw_dst=10.0.0.24,arp_op=1 idle:10 hard:30 buf:0x16f8e actions=output:5
+OFPT_PACKET_OUT (xid=0x70311): in_port=7 actions_len=8 actions=FLOOD buffer=0x00016f8f
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=5 data_len=42 buffer=0x00016f90
+priority0:tunnel0:in_port0005:tci(0) mac00:00:00:00:00:24->00:00:00:00:00:03 type0806 proto2 tos0 ttl0 ip10.0.0.24->10.0.0.3 arp_ha00:00:00:00:00:24->00:00:00:00:00:03
+00:00:00:00:00:24 > 00:00:00:00:00:03, ethertype ARP (0x0806), length 42: Reply 10.0.0.24 is-at 00:00:00:00:00:24, length 28
+Dec 01 23:31:15|00004|ofp_util|INFO|normalization changed ofp_match, details:
+Dec 01 23:31:15|00005|ofp_util|INFO| pre: priority=65535,arp,in_port=5,vlan_tci=0x0000,dl_src=00:00:00:00:00:24,dl_dst=00:00:00:00:00:03,nw_src=10.0.0.24,nw_dst=10.0.0.3,arp_op=2,nw_tos=0,tp_src=0,tp_dst=0
+Dec 01 23:31:15|00006|ofp_util|INFO|post: priority=65535,arp,in_port=5,vlan_tci=0x0000,dl_src=00:00:00:00:00:24,dl_dst=00:00:00:00:00:03,nw_src=10.0.0.24,nw_dst=10.0.0.3,arp_op=2
+OFPT_FLOW_MOD (xid=0x70312): ADD priority=65535,arp,in_port=5,vlan_tci=0x0000,dl_src=00:00:00:00:00:24,dl_dst=00:00:00:00:00:03,nw_src=10.0.0.24,nw_dst=10.0.0.3,arp_op=2 idle:10 hard:30 buf:0x16f90 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=6 data_len=54 buffer=0x00016f91
+priority0:tunnel0:in_port0006:tci(0) mac00:00:00:00:00:25->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.25->224.0.0.22
+00:00:00:00:00:25 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.25 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x00016f92
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:14->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.14->224.0.0.22
+00:00:00:00:00:14 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.14 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x7031d): in_port=6 actions_len=8 actions=FLOOD buffer=0x00016f91
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x00016f93
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:18->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.18->224.0.0.22
+00:00:00:00:00:18 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.18 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x7031e): in_port=1 actions_len=8 actions=FLOOD buffer=0x00016f92
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x00016f94
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:31->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.31->224.0.0.22
+00:00:00:00:00:31 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.31 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x70326): in_port=1 actions_len=8 actions=FLOOD buffer=0x00016f93
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=10 data_len=54 buffer=0x00016f95
+priority0:tunnel0:in_port000a:tci(0) mac00:00:00:00:00:29->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.29->224.0.0.22
+00:00:00:00:00:29 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.29 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x70331): in_port=1 actions_len=8 actions=FLOOD buffer=0x00016f94
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x00016f96
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:03->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.3->224.0.0.22
+00:00:00:00:00:03 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.3 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x70333): in_port=10 actions_len=8 actions=FLOOD buffer=0x00016f95
+OFPT_PACKET_OUT (xid=0x70334): in_port=1 actions_len=8 actions=FLOOD buffer=0x00016f96
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x00016f97
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:32->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.32->224.0.0.22
+00:00:00:00:00:32 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.32 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x70346): in_port=1 actions_len=8 actions=FLOOD buffer=0x00016f97
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x00016f98
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:34->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.34->224.0.0.22
+00:00:00:00:00:34 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.34 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x70349): in_port=1 actions_len=8 actions=FLOOD buffer=0x00016f98
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x00016f99
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:36->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.36->224.0.0.22
+00:00:00:00:00:36 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.36 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x70352): in_port=1 actions_len=8 actions=FLOOD buffer=0x00016f99
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x00016f9a
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:38->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.38->224.0.0.22
+00:00:00:00:00:38 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.38 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x70358): in_port=1 actions_len=8 actions=FLOOD buffer=0x00016f9a
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x00016f9b
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:34->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.34->224.0.0.22
+00:00:00:00:00:34 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.34 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x70362): in_port=1 actions_len=8 actions=FLOOD buffer=0x00016f9b
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x00016f9c
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:32->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.32->224.0.0.22
+00:00:00:00:00:32 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.32 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x7036d): in_port=1 actions_len=8 actions=FLOOD buffer=0x00016f9c
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=2 data_len=42 buffer=0x00016f9d
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:21->00:00:00:00:00:03 type0806 proto1 tos0 ttl0 ip10.0.0.21->10.0.0.3 arp_ha00:00:00:00:00:21->00:00:00:00:00:00
+00:00:00:00:00:21 > 00:00:00:00:00:03, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.3 tell 10.0.0.21, length 28
+Dec 01 23:31:16|00007|ofp_util|INFO|normalization changed ofp_match, details:
+Dec 01 23:31:16|00008|ofp_util|INFO| pre: priority=65535,arp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:21,dl_dst=00:00:00:00:00:03,nw_src=10.0.0.21,nw_dst=10.0.0.3,arp_op=1,nw_tos=0,icmp_type=0,icmp_code=0
+Dec 01 23:31:16|00009|ofp_util|INFO|post: priority=65535,arp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:21,dl_dst=00:00:00:00:00:03,nw_src=10.0.0.21,nw_dst=10.0.0.3,arp_op=1
+OFPT_FLOW_MOD (xid=0x70375): ADD priority=65535,arp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:21,dl_dst=00:00:00:00:00:03,nw_src=10.0.0.21,nw_dst=10.0.0.3,arp_op=1 idle:10 hard:30 buf:0x16f9d actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x00016f9e
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:09->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.9->224.0.0.22
+00:00:00:00:00:09 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.9 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x7037d): in_port=1 actions_len=8 actions=FLOOD buffer=0x00016f9e
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=1 data_len=42 buffer=0x00016f9f
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:03->00:00:00:00:00:21 type0806 proto2 tos0 ttl0 ip10.0.0.3->10.0.0.21 arp_ha00:00:00:00:00:03->00:00:00:00:00:21
+00:00:00:00:00:03 > 00:00:00:00:00:21, ethertype ARP (0x0806), length 42: Reply 10.0.0.3 is-at 00:00:00:00:00:03, length 28
+Dec 01 23:31:16|00010|ofp_util|INFO|normalization changed ofp_match, details:
+Dec 01 23:31:16|00011|ofp_util|INFO| pre: priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:03,dl_dst=00:00:00:00:00:21,nw_src=10.0.0.3,nw_dst=10.0.0.21,arp_op=2,nw_tos=0,tp_src=0,tp_dst=0
+Dec 01 23:31:16|00012|ofp_util|INFO|post: priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:03,dl_dst=00:00:00:00:00:21,nw_src=10.0.0.3,nw_dst=10.0.0.21,arp_op=2
+OFPT_FLOW_MOD (xid=0x70385): ADD priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:03,dl_dst=00:00:00:00:00:21,nw_src=10.0.0.3,nw_dst=10.0.0.21,arp_op=2 idle:10 hard:30 buf:0x16f9f actions=output:2
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x00016fa0
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:04->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.4->224.0.0.22
+00:00:00:00:00:04 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.4 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x7038b): in_port=1 actions_len=8 actions=FLOOD buffer=0x00016fa0
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x00016fa1
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:14->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.14->224.0.0.22
+00:00:00:00:00:14 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.14 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x70392): in_port=1 actions_len=8 actions=FLOOD buffer=0x00016fa1
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=7 data_len=54 buffer=0x00016fa2
+priority0:tunnel0:in_port0007:tci(0) mac00:00:00:00:00:26->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.26->224.0.0.22
+00:00:00:00:00:26 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.26 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x70394): in_port=7 actions_len=8 actions=FLOOD buffer=0x00016fa2
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x00016fa3
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:38->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.38->224.0.0.22
+00:00:00:00:00:38 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.38 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x7039d): in_port=1 actions_len=8 actions=FLOOD buffer=0x00016fa3
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x00016fa4
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:13->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.13->224.0.0.22
+00:00:00:00:00:13 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.13 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x703a7): in_port=1 actions_len=8 actions=FLOOD buffer=0x00016fa4
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x00016fa5
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:10->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.10->224.0.0.22
+00:00:00:00:00:10 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.10 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x703ae): in_port=1 actions_len=8 actions=FLOOD buffer=0x00016fa5
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=6 data_len=54 buffer=0x00016fa6
+priority0:tunnel0:in_port0006:tci(0) mac00:00:00:00:00:25->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.25->224.0.0.22
+00:00:00:00:00:25 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.25 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x703b0): in_port=6 actions_len=8 actions=FLOOD buffer=0x00016fa6
+OFPT_PORT_STATUS (xid=0x0): MOD: 1(gs5_to_gs4): addr:d6:07:00:00:00:00
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+OFPT_PORT_STATUS (xid=0x0): DEL: 1(gs5_to_gs4): addr:d6:07:00:00:00:00
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+OFPT_PORT_STATUS (xid=0x0): MOD: 2(gs5_to_gh21): addr:2e:6c:48:d9:60:c5
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): DEL: 2(gs5_to_gh21): addr:2e:6c:48:d9:60:c5
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): MOD: 3(gs5_to_gh22): addr:52:85:02:d5:05:0e
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): DEL: 3(gs5_to_gh22): addr:52:85:02:d5:05:0e
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): MOD: 4(gs5_to_gh23): addr:72:fa:f7:d0:1d:d1
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): DEL: 4(gs5_to_gh23): addr:72:fa:f7:d0:1d:d1
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): MOD: 5(gs5_to_gh24): addr:ce:b5:75:0d:cf:12
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): DEL: 5(gs5_to_gh24): addr:ce:b5:75:0d:cf:12
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): MOD: 6(gs5_to_gh25): addr:ea:d5:c8:bc:56:23
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): DEL: 6(gs5_to_gh25): addr:ea:d5:c8:bc:56:23
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): MOD: 7(gs5_to_gh26): addr:06:40:8f:f7:1d:d9
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): DEL: 7(gs5_to_gh26): addr:06:40:8f:f7:1d:d9
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): MOD: 8(gs5_to_gh27): addr:26:36:92:fd:89:50
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): DEL: 8(gs5_to_gh27): addr:26:36:92:fd:89:50
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): MOD: 9(gs5_to_gh28): addr:b6:eb:4d:3b:64:fe
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): DEL: 9(gs5_to_gh28): addr:b6:eb:4d:3b:64:fe
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): MOD: 10(gs5_to_gh29): addr:76:bf:44:52:39:56
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): DEL: 10(gs5_to_gh29): addr:76:bf:44:52:39:56
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): MOD: 11(gs5_to_gh30): addr:92:a8:36:5f:00:e4
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): DEL: 11(gs5_to_gh30): addr:92:a8:36:5f:00:e4
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+ovs-ofctl: vconn_recv (End of file)

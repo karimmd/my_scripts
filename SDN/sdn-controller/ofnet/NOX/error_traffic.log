@@ -1,0 +1,25 @@
+rm: cannot remove `failed_events.log': No such file or directory
+rm: cannot remove `vswitchd_restart.log': No such file or directory
+gh3 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.3 &
+gh4 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.4 &
+gh7 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.7 &
+gh8 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.8 &
+gh10 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.10 &
+gh9 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.9 &
+gh15 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.15 &
+gh14 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.14 &
+gh16 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.16 &
+gh18 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.18 &
+gh17 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.17 &
+gh19 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.19 &
+gh20 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.20 &
+gh22 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.22 &
+gh24 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.24 &
+gh25 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.25 &
+gh28 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.28 &
+gh32 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.32 &
+gh35 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.35 &
+gh34 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.34 &
+gh37 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.37 &
+gh40 Starting mcast_client : /home/ofnet/ofnet/bin/cbin/mcast_client 10.0.0.40 &
+connect: Network is unreachable

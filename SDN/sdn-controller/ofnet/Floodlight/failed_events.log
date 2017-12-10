@@ -1,0 +1,2 @@
+hsh gh38 netperf -H 10.0.0.22 -t UDP_STREAM -l -100000 > /dev/null 2>> error_traffic.log filter all gh38 gh22
+256

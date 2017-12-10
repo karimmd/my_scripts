@@ -14,7 +14,7 @@ set xtic auto
 set ytic auto
 set xtics font ", 10"
 set ytics font ", 10"
-
+set logscale y
 set xlabel font ", 14"
 set ylabel font ", 14"
 

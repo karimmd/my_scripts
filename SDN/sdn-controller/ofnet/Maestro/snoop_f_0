@@ -1,0 +1,568 @@
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=7 data_len=42 buffer=0x0000a315
+priority0:tunnel0:in_port0007:tci(0) mac00:00:00:00:00:26->ff:ff:ff:ff:ff:ff type0806 proto1 tos0 ttl0 ip10.0.0.26->10.0.0.2 arp_ha00:00:00:00:00:26->00:00:00:00:00:00
+00:00:00:00:00:26 > ff:ff:ff:ff:ff:ff, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.2 tell 10.0.0.26, length 28
+Dec 01 23:13:35|00001|ofp_util|INFO|normalization changed ofp_match, details:
+Dec 01 23:13:35|00002|ofp_util|INFO| pre: priority=65535,arp,in_port=7,vlan_tci=0x0000,dl_src=00:00:00:00:00:26,dl_dst=ff:ff:ff:ff:ff:ff,nw_src=0.0.0.0,nw_dst=0.0.0.0,arp_op=0,nw_tos=0,tp_src=0,tp_dst=0
+Dec 01 23:13:35|00003|ofp_util|INFO|post: priority=65535,arp,in_port=7,vlan_tci=0x0000,dl_src=00:00:00:00:00:26,dl_dst=ff:ff:ff:ff:ff:ff,nw_src=0.0.0.0,nw_dst=0.0.0.0,arp_op=0
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,arp,in_port=7,vlan_tci=0x0000,dl_src=00:00:00:00:00:26,dl_dst=ff:ff:ff:ff:ff:ff,nw_src=0.0.0.0,nw_dst=0.0.0.0,arp_op=0 cookie:0x3f7ea idle:30 hard:180 buf:0xa315 actions=FLOOD
+OFPT_PACKET_OUT (xid=0x0): in_port=7 actions_len=8 actions=FLOOD buffer=0x0000a315
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=7 actions_len=8 actions=FLOOD buffer=0x0000a315
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=4 data_len=42 buffer=0x0000a316
+priority0:tunnel0:in_port0004:tci(0) mac00:00:00:00:00:23->ff:ff:ff:ff:ff:ff type0806 proto1 tos0 ttl0 ip10.0.0.23->10.0.0.2 arp_ha00:00:00:00:00:23->00:00:00:00:00:00
+00:00:00:00:00:23 > ff:ff:ff:ff:ff:ff, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.2 tell 10.0.0.23, length 28
+Dec 01 23:13:35|00004|ofp_util|INFO|normalization changed ofp_match, details:
+Dec 01 23:13:35|00005|ofp_util|INFO| pre: priority=65535,arp,in_port=4,vlan_tci=0x0000,dl_src=00:00:00:00:00:23,dl_dst=ff:ff:ff:ff:ff:ff,nw_src=0.0.0.0,nw_dst=0.0.0.0,arp_op=0,nw_tos=0,tp_src=0,tp_dst=0
+Dec 01 23:13:35|00006|ofp_util|INFO|post: priority=65535,arp,in_port=4,vlan_tci=0x0000,dl_src=00:00:00:00:00:23,dl_dst=ff:ff:ff:ff:ff:ff,nw_src=0.0.0.0,nw_dst=0.0.0.0,arp_op=0
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,arp,in_port=4,vlan_tci=0x0000,dl_src=00:00:00:00:00:23,dl_dst=ff:ff:ff:ff:ff:ff,nw_src=0.0.0.0,nw_dst=0.0.0.0,arp_op=0 cookie:0x3f815 idle:30 hard:180 buf:0xa316 actions=FLOOD
+OFPT_PACKET_OUT (xid=0x0): in_port=4 actions_len=8 actions=FLOOD buffer=0x0000a316
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=4 actions_len=8 actions=FLOOD buffer=0x0000a316
+OFPT_PACKET_IN (xid=0x0): total_len=74 in_port=1 data_len=74 buffer=0x0000a317
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto6 tos0 ttl64 ip10.0.0.39->10.0.0.22 port53114->12865
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 74: 10.0.0.39.53114 > 10.0.0.22.12865: Flags [S], seq 2732849113, win 29200, options [mss 1460,sackOK,TS val 5249237 ecr 0,nop,wscale 7], length 0
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=53114,tp_dst=12865 cookie:0x3f83a idle:30 hard:180 buf:0xa317 actions=output:3
+OFPT_PACKET_IN (xid=0x0): total_len=74 in_port=3 data_len=74 buffer=0x0000a018
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:22->00:00:00:00:00:39 type0800 proto6 tos0 ttl64 ip10.0.0.22->10.0.0.39 port12865->53114
+00:00:00:00:00:22 > 00:00:00:00:00:39, ethertype IPv4 (0x0800), length 74: 10.0.0.22.12865 > 10.0.0.39.53114: Flags [S.], seq 4041143859, ack 2732849114, win 28960, options [mss 1460,sackOK,TS val 5249239 ecr 5249237,nop,wscale 7], length 0
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a317
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a317
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:39,nw_src=10.0.0.22,nw_dst=10.0.0.39,nw_tos=0,tp_src=12865,tp_dst=53114 cookie:0x3f83b idle:30 hard:180 buf:0xa018 actions=output:1
+OFPT_PACKET_OUT (xid=0x0): in_port=3 actions_len=8 actions=output:1 buffer=0x0000a018
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=3 actions_len=8 actions=output:1 buffer=0x0000a018
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a319
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(first) port36364->43022
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39.36364 > 10.0.0.22.43022: UDP, length 65507
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a11a
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(first) port36364->43022
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39.36364 > 10.0.0.22.43022: UDP, length 65507
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a01b
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a31c
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a01d
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a31e
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x00009f1f
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a320
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a221
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a022
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x00009e23
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a024
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a325
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x00009f26
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a327
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a228
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a129
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a32a
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a32b
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a32c
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a22d
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a32e
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a02f
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a330
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a331
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=36364,tp_dst=43022 cookie:0x3f886 idle:30 hard:180 buf:0xa319 actions=output:3
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a319
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a319
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=36364,tp_dst=43022 cookie:0x3f887 idle:30 hard:180 buf:0xa11a actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f888 idle:30 hard:180 buf:0xa01b actions=output:3
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a11a
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a11a
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a01b
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a01b
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f889 idle:30 hard:180 buf:0xa31c actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f88a idle:30 hard:180 buf:0xa01d actions=output:3
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a31c
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a31c
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a01d
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a01d
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f88b idle:30 hard:180 buf:0xa31e actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f88c idle:30 hard:180 buf:0x9f1f actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f88d idle:30 hard:180 buf:0xa320 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f88e idle:30 hard:180 buf:0xa221 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f88f idle:30 hard:180 buf:0xa022 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f890 idle:30 hard:180 buf:0x9e23 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f891 idle:30 hard:180 buf:0xa024 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f892 idle:30 hard:180 buf:0xa325 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f893 idle:30 hard:180 buf:0x9f26 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f894 idle:30 hard:180 buf:0xa327 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f895 idle:30 hard:180 buf:0xa228 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f896 idle:30 hard:180 buf:0xa129 actions=output:3
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a31e
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a31e
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x00009f1f
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x00009f1f
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a320
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a320
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a221
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a221
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a022
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a022
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x00009e23
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x00009e23
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a024
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a024
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a325
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a325
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x00009f26
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x00009f26
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a327
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a327
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a228
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a228
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a129
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a129
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f897 idle:30 hard:180 buf:0xa32a actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f898 idle:30 hard:180 buf:0xa32b actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f899 idle:30 hard:180 buf:0xa32c actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f89a idle:30 hard:180 buf:0xa22d actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f89b idle:30 hard:180 buf:0xa32e actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f89c idle:30 hard:180 buf:0xa02f actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f89d idle:30 hard:180 buf:0xa330 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f89e idle:30 hard:180 buf:0xa331 actions=output:3
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a32a
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a32a
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a32b
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a32b
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a32c
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a32c
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a22d
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a22d
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a32e
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a32e
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a02f
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a02f
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a330
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a330
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a331
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a331
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a332
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a333
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a134
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a235
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a336
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a337
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a238
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a339
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a13a
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a33b
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a33c
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a33d
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a33e
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a33f
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a340
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a341
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a342
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a343
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x00009f44
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a345
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=429 in_port=1 data_len=128 buffer=0x0000a346
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 301 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a347
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a348
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a049
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a34a
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f8e7 idle:30 hard:180 buf:0xa332 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f8e8 idle:30 hard:180 buf:0xa333 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f8e9 idle:30 hard:180 buf:0xa134 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f8ea idle:30 hard:180 buf:0xa235 actions=output:3
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a332
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a332
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a333
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a333
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a134
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a134
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a235
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a235
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f8eb idle:30 hard:180 buf:0xa336 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f8ec idle:30 hard:180 buf:0xa337 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f8ed idle:30 hard:180 buf:0xa238 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f8ee idle:30 hard:180 buf:0xa339 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f8ef idle:30 hard:180 buf:0xa13a actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f8f0 idle:30 hard:180 buf:0xa33b actions=output:3
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a336
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a336
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a337
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a337
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a238
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a238
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a339
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a339
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a13a
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a13a
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a33b
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a33b
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f8f1 idle:30 hard:180 buf:0xa33c actions=output:3
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a33c
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a33c
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f8f2 idle:30 hard:180 buf:0xa33d actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f8f3 idle:30 hard:180 buf:0xa33e actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f8f4 idle:30 hard:180 buf:0xa33f actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f8f5 idle:30 hard:180 buf:0xa340 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f8f6 idle:30 hard:180 buf:0xa341 actions=output:3
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a33d
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a33d
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a33e
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a33e
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a33f
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a33f
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a340
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a340
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a341
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a341
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f8f7 idle:30 hard:180 buf:0xa342 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f8f8 idle:30 hard:180 buf:0xa343 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f8f9 idle:30 hard:180 buf:0x9f44 actions=output:3
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a342
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a342
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a343
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a343
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x00009f44
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x00009f44
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f8fa idle:30 hard:180 buf:0xa345 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=28261,tp_dst=29808 cookie:0x3f8fb idle:30 hard:180 buf:0xa346 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 cookie:0x3f8fc idle:30 hard:180 buf:0xa347 actions=output:3
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a345
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a345
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a346
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a346
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a347
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a347
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 cookie:0x3f8fd idle:30 hard:180 buf:0xa348 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 cookie:0x3f8fe idle:30 hard:180 buf:0xa049 actions=output:3
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a348
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a348
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a049
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a049
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 cookie:0x3f8ff idle:30 hard:180 buf:0xa34a actions=output:3
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a34a
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a34a
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a04b
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a34c
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a24d
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a34e
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a34f
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a050
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a151
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x00009d52
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a353
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a354
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a155
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a356
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a357
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a358
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a359
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a25a
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a15b
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a35c
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a05d
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a35e
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a15f
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a360
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x00009f61
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x00009c62
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_PACKET_IN (xid=0x0): total_len=1514 in_port=1 data_len=128 buffer=0x0000a063
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:39->00:00:00:00:00:22 type0800 proto17 tos0 ttl64 ip10.0.0.39->10.0.0.22 frag(later)
+00:00:00:00:00:39 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 128: truncated-ip - 1386 bytes missing! 10.0.0.39 > 10.0.0.22: udp
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 cookie:0x3f919 idle:30 hard:180 buf:0xa04b actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 cookie:0x3f91a idle:30 hard:180 buf:0xa34c actions=output:3
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a04b
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a04b
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a34c
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a34c
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 cookie:0x3f91b idle:30 hard:180 buf:0xa24d actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 cookie:0x3f91c idle:30 hard:180 buf:0xa34e actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 cookie:0x3f91d idle:30 hard:180 buf:0xa34f actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 cookie:0x3f91e idle:30 hard:180 buf:0xa050 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 cookie:0x3f91f idle:30 hard:180 buf:0xa151 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 cookie:0x3f920 idle:30 hard:180 buf:0x9d52 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 cookie:0x3f921 idle:30 hard:180 buf:0xa353 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 cookie:0x3f922 idle:30 hard:180 buf:0xa354 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 cookie:0x3f923 idle:30 hard:180 buf:0xa155 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 cookie:0x3f924 idle:30 hard:180 buf:0xa356 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 cookie:0x3f925 idle:30 hard:180 buf:0xa357 actions=output:3
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a24d
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a24d
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a34e
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a34e
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a34f
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a34f
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a050
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a050
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a151
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a151
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x00009d52
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x00009d52
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a353
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a353
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a354
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a354
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a155
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a155
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a356
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a356
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a357
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a357
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 cookie:0x3f926 idle:30 hard:180 buf:0xa358 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 cookie:0x3f927 idle:30 hard:180 buf:0xa359 actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 cookie:0x3f928 idle:30 hard:180 buf:0xa25a actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 cookie:0x3f929 idle:30 hard:180 buf:0xa15b actions=output:3
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a358
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a358
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a359
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a359
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a25a
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a25a
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a15b
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a15b
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 cookie:0x3f92a idle:30 hard:180 buf:0xa35c actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 cookie:0x3f92b idle:30 hard:180 buf:0xa05d actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 cookie:0x3f92c idle:30 hard:180 buf:0xa35e actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 cookie:0x3f92d idle:30 hard:180 buf:0xa15f actions=output:3
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 cookie:0x3f92e idle:30 hard:180 buf:0xa360 actions=output:3
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a35c
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a35c
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a05d
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a05d
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a35e
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a35e
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a15f
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a15f
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a360
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a360
+Dec 01 23:13:36|00007|ofp_util|INFO|normalization changed ofp_match, details:
+Dec 01 23:13:36|00008|ofp_util|INFO| pre: priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=ff:ff:ff:ff:ff:ff,nw_src=0.0.0.0,nw_dst=0.0.0.0,arp_op=0,nw_tos=0,tp_src=0,tp_dst=0
+Dec 01 23:13:36|00009|ofp_util|INFO|post: priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=ff:ff:ff:ff:ff:ff,nw_src=0.0.0.0,nw_dst=0.0.0.0,arp_op=0
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=ff:ff:ff:ff:ff:ff,nw_src=0.0.0.0,nw_dst=0.0.0.0,arp_op=0 cookie:0x3f942 idle:30 hard:180 buf:0xa164 actions=FLOOD
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=FLOOD buffer=0x0000a164
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=FLOOD buffer=0x0000a164
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.39,nw_dst=10.0.0.22,nw_tos=0,tp_src=25972,tp_dst=28773 cookie:0x3f943 idle:30 hard:180 buf:0xa365 actions=output:3
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a365
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=1 actions_len=8 actions=output:3 buffer=0x0000a365
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=3 data_len=42 buffer=0x0000a374
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:22->ff:ff:ff:ff:ff:ff type0806 proto1 tos0 ttl0 ip10.0.0.22->10.0.0.2 arp_ha00:00:00:00:00:22->00:00:00:00:00:00
+00:00:00:00:00:22 > ff:ff:ff:ff:ff:ff, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.2 tell 10.0.0.22, length 28
+Dec 01 23:13:36|00010|ofp_util|INFO|normalization changed ofp_match, details:
+Dec 01 23:13:36|00011|ofp_util|INFO| pre: priority=65535,arp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=ff:ff:ff:ff:ff:ff,nw_src=0.0.0.0,nw_dst=0.0.0.0,arp_op=0,nw_tos=0,tp_src=0,tp_dst=0
+Dec 01 23:13:36|00012|ofp_util|INFO|post: priority=65535,arp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=ff:ff:ff:ff:ff:ff,nw_src=0.0.0.0,nw_dst=0.0.0.0,arp_op=0
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,arp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=ff:ff:ff:ff:ff:ff,nw_src=0.0.0.0,nw_dst=0.0.0.0,arp_op=0 cookie:0x3f98f idle:30 hard:180 buf:0xa374 actions=FLOOD
+OFPT_PACKET_OUT (xid=0x0): in_port=3 actions_len=8 actions=FLOOD buffer=0x0000a374
+OFPT_ERROR (xid=0x0): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+OFPT_PACKET_OUT (xid=0x0): in_port=3 actions_len=8 actions=FLOOD buffer=0x0000a374

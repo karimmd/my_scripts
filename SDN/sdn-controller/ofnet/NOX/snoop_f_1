@@ -1,0 +1,589 @@
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x00016694
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:32->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.32->224.0.0.22
+00:00:00:00:00:32 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.32 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=2 data_len=42 buffer=0x00016695
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:21->00:00:00:00:00:36 type0806 proto1 tos0 ttl0 ip10.0.0.21->10.0.0.36 arp_ha00:00:00:00:00:21->00:00:00:00:00:00
+00:00:00:00:00:21 > 00:00:00:00:00:36, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.36 tell 10.0.0.21, length 28
+OFPT_PACKET_OUT (xid=0x76cc8): in_port=1 actions_len=8 actions=FLOOD buffer=0x00016694
+Dec 01 22:54:49|00001|ofp_util|INFO|normalization changed ofp_match, details:
+Dec 01 22:54:49|00002|ofp_util|INFO| pre: priority=65535,arp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:21,dl_dst=00:00:00:00:00:36,nw_src=10.0.0.21,nw_dst=10.0.0.36,arp_op=1,nw_tos=0,icmp_type=0,icmp_code=0
+Dec 01 22:54:49|00003|ofp_util|INFO|post: priority=65535,arp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:21,dl_dst=00:00:00:00:00:36,nw_src=10.0.0.21,nw_dst=10.0.0.36,arp_op=1
+OFPT_FLOW_MOD (xid=0x76cc9): ADD priority=65535,arp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:21,dl_dst=00:00:00:00:00:36,nw_src=10.0.0.21,nw_dst=10.0.0.36,arp_op=1 idle:5 buf:0x16695 flags:0x1 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=1 data_len=42 buffer=0x00016696
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:36->00:00:00:00:00:21 type0806 proto2 tos0 ttl0 ip10.0.0.36->10.0.0.21 arp_ha00:00:00:00:00:36->00:00:00:00:00:21
+00:00:00:00:00:36 > 00:00:00:00:00:21, ethertype ARP (0x0806), length 42: Reply 10.0.0.36 is-at 00:00:00:00:00:36, length 28
+Dec 01 22:54:49|00004|ofp_util|INFO|normalization changed ofp_match, details:
+Dec 01 22:54:49|00005|ofp_util|INFO| pre: priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:36,dl_dst=00:00:00:00:00:21,nw_src=10.0.0.36,nw_dst=10.0.0.21,arp_op=2,nw_tos=0,tp_src=0,tp_dst=0
+Dec 01 22:54:49|00006|ofp_util|INFO|post: priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:36,dl_dst=00:00:00:00:00:21,nw_src=10.0.0.36,nw_dst=10.0.0.21,arp_op=2
+OFPT_FLOW_MOD (xid=0x76cd2): ADD priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:36,dl_dst=00:00:00:00:00:21,nw_src=10.0.0.36,nw_dst=10.0.0.21,arp_op=2 idle:5 buf:0x16696 flags:0x1 actions=output:2
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x00016697
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:35->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.35->224.0.0.22
+00:00:00:00:00:35 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.35 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x76cd5): in_port=1 actions_len=8 actions=FLOOD buffer=0x00016697
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x00016698
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:34->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.34->224.0.0.22
+00:00:00:00:00:34 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.34 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x76ce2): in_port=1 actions_len=8 actions=FLOOD buffer=0x00016698
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x00016699
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:37->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.37->224.0.0.22
+00:00:00:00:00:37 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.37 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x76ced): in_port=1 actions_len=8 actions=FLOOD buffer=0x00016699
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x0001669a
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:40->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.40->224.0.0.22
+00:00:00:00:00:40 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.40 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x76cf4): in_port=1 actions_len=8 actions=FLOOD buffer=0x0001669a
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=6 data_len=42 buffer=0x0001669b
+priority0:tunnel0:in_port0006:tci(0) mac00:00:00:00:00:25->00:00:00:00:00:16 type0806 proto1 tos0 ttl0 ip10.0.0.25->10.0.0.16 arp_ha00:00:00:00:00:25->00:00:00:00:00:00
+00:00:00:00:00:25 > 00:00:00:00:00:16, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.16 tell 10.0.0.25, length 28
+Dec 01 22:54:50|00007|ofp_util|INFO|normalization changed ofp_match, details:
+Dec 01 22:54:50|00008|ofp_util|INFO| pre: priority=65535,arp,in_port=6,vlan_tci=0x0000,dl_src=00:00:00:00:00:25,dl_dst=00:00:00:00:00:16,nw_src=10.0.0.25,nw_dst=10.0.0.16,arp_op=1,nw_tos=0,icmp_type=0,icmp_code=0
+Dec 01 22:54:50|00009|ofp_util|INFO|post: priority=65535,arp,in_port=6,vlan_tci=0x0000,dl_src=00:00:00:00:00:25,dl_dst=00:00:00:00:00:16,nw_src=10.0.0.25,nw_dst=10.0.0.16,arp_op=1
+OFPT_FLOW_MOD (xid=0x76d01): ADD priority=65535,arp,in_port=6,vlan_tci=0x0000,dl_src=00:00:00:00:00:25,dl_dst=00:00:00:00:00:16,nw_src=10.0.0.25,nw_dst=10.0.0.16,arp_op=1 idle:5 buf:0x1669b flags:0x1 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=1 data_len=42 buffer=0x0001669c
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:16->00:00:00:00:00:25 type0806 proto2 tos0 ttl0 ip10.0.0.16->10.0.0.25 arp_ha00:00:00:00:00:16->00:00:00:00:00:25
+00:00:00:00:00:16 > 00:00:00:00:00:25, ethertype ARP (0x0806), length 42: Reply 10.0.0.16 is-at 00:00:00:00:00:16, length 28
+Dec 01 22:54:50|00010|ofp_util|INFO|normalization changed ofp_match, details:
+Dec 01 22:54:50|00011|ofp_util|INFO| pre: priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:16,dl_dst=00:00:00:00:00:25,nw_src=10.0.0.16,nw_dst=10.0.0.25,arp_op=2,nw_tos=0,tp_src=0,tp_dst=0
+Dec 01 22:54:50|00012|ofp_util|INFO|post: priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:16,dl_dst=00:00:00:00:00:25,nw_src=10.0.0.16,nw_dst=10.0.0.25,arp_op=2
+OFPT_FLOW_MOD (xid=0x76d0c): ADD priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:16,dl_dst=00:00:00:00:00:25,nw_src=10.0.0.16,nw_dst=10.0.0.25,arp_op=2 idle:5 buf:0x1669c flags:0x1 actions=output:6
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=2 data_len=42 buffer=0x0001669d
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:21->00:00:00:00:00:40 type0806 proto1 tos0 ttl0 ip10.0.0.21->10.0.0.40 arp_ha00:00:00:00:00:21->00:00:00:00:00:00
+00:00:00:00:00:21 > 00:00:00:00:00:40, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.40 tell 10.0.0.21, length 28
+Dec 01 22:54:50|00013|ofp_util|INFO|normalization changed ofp_match, details:
+Dec 01 22:54:50|00014|ofp_util|INFO| pre: priority=65535,arp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:21,dl_dst=00:00:00:00:00:40,nw_src=10.0.0.21,nw_dst=10.0.0.40,arp_op=1,nw_tos=0,icmp_type=0,icmp_code=0
+Dec 01 22:54:50|00015|ofp_util|INFO|post: priority=65535,arp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:21,dl_dst=00:00:00:00:00:40,nw_src=10.0.0.21,nw_dst=10.0.0.40,arp_op=1
+OFPT_FLOW_MOD (xid=0x76d13): ADD priority=65535,arp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:21,dl_dst=00:00:00:00:00:40,nw_src=10.0.0.21,nw_dst=10.0.0.40,arp_op=1 idle:5 buf:0x1669d flags:0x1 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=1 data_len=42 buffer=0x0001669e
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:40->00:00:00:00:00:21 type0806 proto2 tos0 ttl0 ip10.0.0.40->10.0.0.21 arp_ha00:00:00:00:00:40->00:00:00:00:00:21
+00:00:00:00:00:40 > 00:00:00:00:00:21, ethertype ARP (0x0806), length 42: Reply 10.0.0.40 is-at 00:00:00:00:00:40, length 28
+OFPT_FLOW_MOD (xid=0x76d18): ADD priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:40,dl_dst=00:00:00:00:00:21,nw_src=10.0.0.40,nw_dst=10.0.0.21,arp_op=2 idle:5 buf:0x1669e flags:0x1 actions=output:2
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,icmp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:16,dl_dst=00:00:00:00:00:25,nw_src=10.0.0.16,nw_dst=10.0.0.25,nw_tos=0,icmp_type=8,icmp_code=0 reason=idle duration5.352s idle5 pkts1 bytes98
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,icmp,in_port=6,vlan_tci=0x0000,dl_src=00:00:00:00:00:25,dl_dst=00:00:00:00:00:16,nw_src=10.0.0.25,nw_dst=10.0.0.16,nw_tos=0,icmp_type=0,icmp_code=0 reason=idle duration5.35s idle5 pkts1 bytes98
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:26,nw_src=10.0.0.2,nw_dst=10.0.0.26,nw_tos=0,tp_src=12865,tp_dst=38150 reason=idle duration5.327s idle5 pkts6 bytes1172
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:36,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.36,nw_dst=10.0.0.22,nw_tos=0,tp_src=0,tp_dst=0 reason=idle duration5.628s idle5 pkts1 bytes1514
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:16,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.16,nw_dst=10.0.0.22,nw_tos=0,tp_src=41787,tp_dst=41078 reason=idle duration5.382s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:23,nw_src=10.0.0.2,nw_dst=10.0.0.23,nw_tos=0,tp_src=34445,tp_dst=38715 reason=idle duration5.275s idle5 pkts1 bytes170
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:36,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.36,nw_dst=10.0.0.22,nw_tos=0,tp_src=48086,tp_dst=12865 reason=idle duration5.68s idle5 pkts9 bytes1114
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:27,nw_src=10.0.0.2,nw_dst=10.0.0.27,nw_tos=0,tp_src=46903,tp_dst=50150 reason=idle duration5.937s idle5 pkts1 bytes170
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,icmp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:21,dl_dst=00:00:00:00:00:36,nw_src=10.0.0.21,nw_dst=10.0.0.36,nw_tos=0,icmp_type=0,icmp_code=0 reason=idle duration5.548s idle5 pkts1 bytes98
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,icmp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:26,nw_src=10.0.0.2,nw_dst=10.0.0.26,nw_tos=0,icmp_type=3,icmp_code=3 reason=idle duration5.237s idle5 pkts1 bytes70
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:27,nw_src=10.0.0.2,nw_dst=10.0.0.27,nw_tos=0,tp_src=12865,tp_dst=35280 reason=idle duration5.985s idle5 pkts6 bytes1172
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,icmp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:23,nw_src=10.0.0.2,nw_dst=10.0.0.23,nw_tos=0,icmp_type=3,icmp_code=3 reason=idle duration5.237s idle5 pkts1 bytes70
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:16,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.16,nw_dst=10.0.0.22,nw_tos=0,tp_src=0,tp_dst=0 reason=idle duration5.382s idle5 pkts1 bytes1514
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:15,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.15,nw_dst=10.0.0.22,nw_tos=0,tp_src=0,tp_dst=0 reason=idle duration5.804s idle5 pkts1 bytes1514
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:36,nw_src=10.0.0.22,nw_dst=10.0.0.36,nw_tos=0,tp_src=12865,tp_dst=48086 reason=idle duration5.674s idle5 pkts6 bytes1172
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:16,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.16,nw_dst=10.0.0.22,nw_tos=0,tp_src=47062,tp_dst=12865 reason=idle duration5.517s idle5 pkts9 bytes1114
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,icmp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:21,dl_dst=00:00:00:00:00:40,nw_src=10.0.0.21,nw_dst=10.0.0.40,nw_tos=0,icmp_type=0,icmp_code=0 reason=idle duration5.068s idle5 pkts1 bytes98
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,icmp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:36,dl_dst=00:00:00:00:00:21,nw_src=10.0.0.36,nw_dst=10.0.0.21,nw_tos=0,icmp_type=8,icmp_code=0 reason=idle duration5.551s idle5 pkts1 bytes98
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:15,nw_src=10.0.0.22,nw_dst=10.0.0.15,nw_tos=0,tp_src=12865,tp_dst=53664 reason=idle duration5.907s idle5 pkts6 bytes1172
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,udp,in_port=6,vlan_tci=0x0000,dl_src=00:00:00:00:00:25,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.25,nw_dst=10.0.0.2,nw_tos=0,tp_src=40926,tp_dst=33504 reason=idle duration5.162s idle5 pkts4 bytes296
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,icmp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:31,nw_src=10.0.0.22,nw_dst=10.0.0.31,nw_tos=0,icmp_type=3,icmp_code=3 reason=idle duration5.129s idle5 pkts1 bytes590
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,udp,in_port=7,vlan_tci=0x0000,dl_src=00:00:00:00:00:26,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.26,nw_dst=10.0.0.2,nw_tos=0,tp_src=60084,tp_dst=46947 reason=idle duration5.32s idle5 pkts4 bytes296
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:23,nw_src=10.0.0.2,nw_dst=10.0.0.23,nw_tos=0,tp_src=12865,tp_dst=34007 reason=idle duration5.342s idle5 pkts6 bytes1172
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:15,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.15,nw_dst=10.0.0.22,nw_tos=0,tp_src=57416,tp_dst=34177 reason=idle duration5.804s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,udp,in_port=4,vlan_tci=0x0000,dl_src=00:00:00:00:00:23,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.23,nw_dst=10.0.0.2,nw_tos=0,tp_src=38715,tp_dst=34445 reason=idle duration5.32s idle5 pkts4 bytes296
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:36,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.36,nw_dst=10.0.0.22,nw_tos=0,tp_src=54788,tp_dst=53904 reason=idle duration5.598s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,udp,in_port=8,vlan_tci=0x0000,dl_src=00:00:00:00:00:27,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.27,nw_dst=10.0.0.2,nw_tos=0,tp_src=50150,tp_dst=46903 reason=idle duration5.97s idle5 pkts4 bytes296
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:25,nw_src=10.0.0.2,nw_dst=10.0.0.25,nw_tos=0,tp_src=12865,tp_dst=59819 reason=idle duration5.195s idle5 pkts6 bytes1172
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:16,nw_src=10.0.0.22,nw_dst=10.0.0.16,nw_tos=0,tp_src=12865,tp_dst=47062 reason=idle duration5.507s idle5 pkts6 bytes1172
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=6,vlan_tci=0x0000,dl_src=00:00:00:00:00:25,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.25,nw_dst=10.0.0.2,nw_tos=0,tp_src=59819,tp_dst=12865 reason=idle duration5.258s idle5 pkts9 bytes1114
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,icmp,in_port=4,vlan_tci=0x0000,dl_src=00:00:00:00:00:23,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.23,nw_dst=10.0.0.2,nw_tos=0,icmp_type=8,icmp_code=0 reason=idle duration5.258s idle5 pkts1 bytes98
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,icmp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:16,nw_src=10.0.0.22,nw_dst=10.0.0.16,nw_tos=0,icmp_type=3,icmp_code=3 reason=idle duration5.375s idle5 pkts1 bytes70
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,icmp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:23,nw_src=10.0.0.2,nw_dst=10.0.0.23,nw_tos=0,icmp_type=0,icmp_code=0 reason=idle duration5.195s idle5 pkts1 bytes98
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,icmp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:36,nw_src=10.0.0.22,nw_dst=10.0.0.36,nw_tos=0,icmp_type=3,icmp_code=3 reason=idle duration5.597s idle5 pkts1 bytes70
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,icmp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:15,nw_src=10.0.0.22,nw_dst=10.0.0.15,nw_tos=0,icmp_type=3,icmp_code=3 reason=idle duration5.8s idle5 pkts1 bytes70
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=7,vlan_tci=0x0000,dl_src=00:00:00:00:00:26,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.26,nw_dst=10.0.0.2,nw_tos=0,tp_src=38150,tp_dst=12865 reason=idle duration5.413s idle5 pkts9 bytes1114
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,icmp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:40,dl_dst=00:00:00:00:00:21,nw_src=10.0.0.40,nw_dst=10.0.0.21,nw_tos=0,icmp_type=8,icmp_code=0 reason=idle duration5.078s idle5 pkts1 bytes98
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:31,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.31,nw_dst=10.0.0.22,nw_tos=0,tp_src=0,tp_dst=0 reason=idle duration5.136s idle5 pkts1 bytes1514
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=8,vlan_tci=0x0000,dl_src=00:00:00:00:00:27,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.27,nw_dst=10.0.0.2,nw_tos=0,tp_src=35280,tp_dst=12865 reason=idle duration6.067s idle5 pkts9 bytes1114
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:31,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.31,nw_dst=10.0.0.22,nw_tos=0,tp_src=56943,tp_dst=12865 reason=idle duration5.237s idle5 pkts9 bytes1114
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:26,nw_src=10.0.0.2,nw_dst=10.0.0.26,nw_tos=0,tp_src=46947,tp_dst=60084 reason=idle duration5.275s idle5 pkts1 bytes170
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:15,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.15,nw_dst=10.0.0.22,nw_tos=0,tp_src=53664,tp_dst=12865 reason=idle duration5.916s idle5 pkts9 bytes1114
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=4,vlan_tci=0x0000,dl_src=00:00:00:00:00:23,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.23,nw_dst=10.0.0.2,nw_tos=0,tp_src=34007,tp_dst=12865 reason=idle duration5.465s idle5 pkts9 bytes1114
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:31,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.31,nw_dst=10.0.0.22,nw_tos=0,tp_src=50566,tp_dst=46455 reason=idle duration5.162s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:31,nw_src=10.0.0.22,nw_dst=10.0.0.31,nw_tos=0,tp_src=12865,tp_dst=56943 reason=idle duration5.227s idle5 pkts6 bytes1172
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:25,nw_src=10.0.0.2,nw_dst=10.0.0.25,nw_tos=0,tp_src=33504,tp_dst=40926 reason=idle duration5.068s idle5 pkts1 bytes170
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:21,dl_dst=00:00:00:00:00:40,nw_src=10.0.0.21,nw_dst=10.0.0.40,arp_op=2 reason=idle duration5.121s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:21,dl_dst=00:00:00:00:00:36,nw_src=10.0.0.21,nw_dst=10.0.0.36,arp_op=2 reason=idle duration5.576s idle5 pkts1 bytes42
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x0001669f
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:16->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.16->224.0.0.22
+00:00:00:00:00:16 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.16 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x76d21): in_port=1 actions_len=8 actions=FLOOD buffer=0x0001669f
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=8 data_len=42 buffer=0x000166a0
+priority0:tunnel0:in_port0008:tci(0) mac00:00:00:00:00:27->00:00:00:00:00:19 type0806 proto1 tos0 ttl0 ip10.0.0.27->10.0.0.19 arp_ha00:00:00:00:00:27->00:00:00:00:00:00
+00:00:00:00:00:27 > 00:00:00:00:00:19, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.19 tell 10.0.0.27, length 28
+OFPT_FLOW_MOD (xid=0x76d2a): ADD priority=65535,arp,in_port=8,vlan_tci=0x0000,dl_src=00:00:00:00:00:27,dl_dst=00:00:00:00:00:19,nw_src=10.0.0.27,nw_dst=10.0.0.19,arp_op=1 idle:5 buf:0x166a0 flags:0x1 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=1 data_len=42 buffer=0x000166a1
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:19->00:00:00:00:00:27 type0806 proto2 tos0 ttl0 ip10.0.0.19->10.0.0.27 arp_ha00:00:00:00:00:19->00:00:00:00:00:27
+00:00:00:00:00:19 > 00:00:00:00:00:27, ethertype ARP (0x0806), length 42: Reply 10.0.0.19 is-at 00:00:00:00:00:19, length 28
+OFPT_FLOW_MOD (xid=0x76d33): ADD priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:19,dl_dst=00:00:00:00:00:27,nw_src=10.0.0.19,nw_dst=10.0.0.27,arp_op=2 idle:5 buf:0x166a1 flags:0x1 actions=output:8
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=6 data_len=54 buffer=0x000166a2
+priority0:tunnel0:in_port0006:tci(0) mac00:00:00:00:00:25->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.25->224.0.0.22
+00:00:00:00:00:25 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.25 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x76d34): in_port=6 actions_len=8 actions=FLOOD buffer=0x000166a2
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x000166a3
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:32->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.32->224.0.0.22
+00:00:00:00:00:32 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.32 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x76d3d): in_port=1 actions_len=8 actions=FLOOD buffer=0x000166a3
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=3 data_len=42 buffer=0x000166a4
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:22->ff:ff:ff:ff:ff:ff type0806 proto1 tos0 ttl0 ip10.0.0.22->10.0.0.12 arp_ha00:00:00:00:00:22->00:00:00:00:00:00
+00:00:00:00:00:22 > ff:ff:ff:ff:ff:ff, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.12 tell 10.0.0.22, length 28
+OFPT_PACKET_OUT (xid=0x76d42): in_port=3 actions_len=8 actions=FLOOD buffer=0x000166a4
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=1 data_len=42 buffer=0x000166a5
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:12->00:00:00:00:00:22 type0806 proto2 tos0 ttl0 ip10.0.0.12->10.0.0.22 arp_ha00:00:00:00:00:12->00:00:00:00:00:22
+00:00:00:00:00:12 > 00:00:00:00:00:22, ethertype ARP (0x0806), length 42: Reply 10.0.0.12 is-at 00:00:00:00:00:12, length 28
+OFPT_FLOW_MOD (xid=0x76d4d): ADD priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:12,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.12,nw_dst=10.0.0.22,arp_op=2 idle:5 buf:0x166a5 flags:0x1 actions=output:3
+OFPT_PACKET_IN (xid=0x0): total_len=66 in_port=3 data_len=66 buffer=0x000166a6
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:22->00:00:00:00:00:12 type0800 proto6 tos0 ttl64 ip10.0.0.22->10.0.0.12 port12865->42679
+00:00:00:00:00:22 > 00:00:00:00:00:12, ethertype IPv4 (0x0800), length 66: 10.0.0.22.12865 > 10.0.0.12.42679: Flags [F.], seq 894673969, ack 1574791794, win 243, options [nop,nop,TS val 4968020 ecr 4945981], length 0
+OFPT_FLOW_MOD (xid=0x76d4e): ADD priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:12,nw_src=10.0.0.22,nw_dst=10.0.0.12,nw_tos=0,tp_src=12865,tp_dst=42679 idle:5 buf:0x166a6 flags:0x1 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=3 data_len=42 buffer=0x000166a7
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:22->ff:ff:ff:ff:ff:ff type0806 proto1 tos0 ttl0 ip10.0.0.22->10.0.0.10 arp_ha00:00:00:00:00:22->00:00:00:00:00:00
+00:00:00:00:00:22 > ff:ff:ff:ff:ff:ff, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.10 tell 10.0.0.22, length 28
+OFPT_PACKET_OUT (xid=0x76d50): in_port=3 actions_len=8 actions=FLOOD buffer=0x000166a7
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=3 data_len=42 buffer=0x000166a8
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:22->ff:ff:ff:ff:ff:ff type0806 proto1 tos0 ttl0 ip10.0.0.22->10.0.0.4 arp_ha00:00:00:00:00:22->00:00:00:00:00:00
+00:00:00:00:00:22 > ff:ff:ff:ff:ff:ff, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.4 tell 10.0.0.22, length 28
+OFPT_PACKET_OUT (xid=0x76d5b): in_port=3 actions_len=8 actions=FLOOD buffer=0x000166a8
+OFPT_PACKET_IN (xid=0x0): total_len=66 in_port=1 data_len=66 buffer=0x000166a9
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:12->00:00:00:00:00:22 type0800 proto6 tos0 ttl64 ip10.0.0.12->10.0.0.22 port42679->12865
+00:00:00:00:00:12 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 66: 10.0.0.12.42679 > 10.0.0.22.12865: Flags [F.], seq 1574791794, ack 894673970, win 245, options [nop,nop,TS val 4968038 ecr 4968020], length 0
+OFPT_FLOW_MOD (xid=0x76d64): ADD priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:12,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.12,nw_dst=10.0.0.22,nw_tos=0,tp_src=42679,tp_dst=12865 idle:5 buf:0x166a9 flags:0x1 actions=output:3
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=1 data_len=42 buffer=0x000166aa
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:10->00:00:00:00:00:22 type0806 proto2 tos0 ttl0 ip10.0.0.10->10.0.0.22 arp_ha00:00:00:00:00:10->00:00:00:00:00:22
+00:00:00:00:00:10 > 00:00:00:00:00:22, ethertype ARP (0x0806), length 42: Reply 10.0.0.10 is-at 00:00:00:00:00:10, length 28
+OFPT_FLOW_MOD (xid=0x76d6a): ADD priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:10,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.10,nw_dst=10.0.0.22,arp_op=2 idle:5 buf:0x166aa flags:0x1 actions=output:3
+OFPT_PACKET_IN (xid=0x0): total_len=66 in_port=3 data_len=66 buffer=0x000166ab
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:22->00:00:00:00:00:10 type0800 proto6 tos0 ttl64 ip10.0.0.22->10.0.0.10 port12865->51581
+00:00:00:00:00:22 > 00:00:00:00:00:10, ethertype IPv4 (0x0800), length 66: 10.0.0.22.12865 > 10.0.0.10.51581: Flags [F.], seq 2287879285, ack 1338038891, win 243, options [nop,nop,TS val 4968032 ecr 4945978], length 0
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=3 data_len=42 buffer=0x000166ac
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:22->ff:ff:ff:ff:ff:ff type0806 proto1 tos0 ttl0 ip10.0.0.22->10.0.0.3 arp_ha00:00:00:00:00:22->00:00:00:00:00:00
+00:00:00:00:00:22 > ff:ff:ff:ff:ff:ff, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.3 tell 10.0.0.22, length 28
+OFPT_FLOW_MOD (xid=0x76d6d): ADD priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:10,nw_src=10.0.0.22,nw_dst=10.0.0.10,nw_tos=0,tp_src=12865,tp_dst=51581 idle:5 buf:0x166ab flags:0x1 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=1 data_len=42 buffer=0x000166ad
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:04->00:00:00:00:00:22 type0806 proto2 tos0 ttl0 ip10.0.0.4->10.0.0.22 arp_ha00:00:00:00:00:04->00:00:00:00:00:22
+00:00:00:00:00:04 > 00:00:00:00:00:22, ethertype ARP (0x0806), length 42: Reply 10.0.0.4 is-at 00:00:00:00:00:04, length 28
+OFPT_PACKET_OUT (xid=0x76d6f): in_port=3 actions_len=8 actions=FLOOD buffer=0x000166ac
+OFPT_FLOW_MOD (xid=0x76d72): ADD priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:04,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.4,nw_dst=10.0.0.22,arp_op=2 idle:5 buf:0x166ad flags:0x1 actions=output:3
+OFPT_PACKET_IN (xid=0x0): total_len=66 in_port=3 data_len=66 buffer=0x000166ae
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:22->00:00:00:00:00:04 type0800 proto6 tos0 ttl64 ip10.0.0.22->10.0.0.4 port12865->45948
+00:00:00:00:00:22 > 00:00:00:00:00:04, ethertype IPv4 (0x0800), length 66: 10.0.0.22.12865 > 10.0.0.4.45948: Flags [F.], seq 953517716, ack 3646465198, win 243, options [nop,nop,TS val 4968038 ecr 4945978], length 0
+OFPT_FLOW_MOD (xid=0x76d77): ADD priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:04,nw_src=10.0.0.22,nw_dst=10.0.0.4,nw_tos=0,tp_src=12865,tp_dst=45948 idle:5 buf:0x166ae flags:0x1 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=3 data_len=42 buffer=0x000166af
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:22->ff:ff:ff:ff:ff:ff type0806 proto1 tos0 ttl0 ip10.0.0.22->10.0.0.32 arp_ha00:00:00:00:00:22->00:00:00:00:00:00
+00:00:00:00:00:22 > ff:ff:ff:ff:ff:ff, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.32 tell 10.0.0.22, length 28
+OFPT_PACKET_OUT (xid=0x76d82): in_port=3 actions_len=8 actions=FLOOD buffer=0x000166af
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=1 data_len=42 buffer=0x000166b0
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:03->00:00:00:00:00:22 type0806 proto2 tos0 ttl0 ip10.0.0.3->10.0.0.22 arp_ha00:00:00:00:00:03->00:00:00:00:00:22
+00:00:00:00:00:03 > 00:00:00:00:00:22, ethertype ARP (0x0806), length 42: Reply 10.0.0.3 is-at 00:00:00:00:00:03, length 28
+OFPT_FLOW_MOD (xid=0x76d8f): ADD priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:03,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.3,nw_dst=10.0.0.22,arp_op=2 idle:5 buf:0x166b0 flags:0x1 actions=output:3
+OFPT_PACKET_IN (xid=0x0): total_len=66 in_port=3 data_len=66 buffer=0x000166b1
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:22->00:00:00:00:00:03 type0800 proto6 tos0 ttl64 ip10.0.0.22->10.0.0.3 port12865->45191
+00:00:00:00:00:22 > 00:00:00:00:00:03, ethertype IPv4 (0x0800), length 66: 10.0.0.22.12865 > 10.0.0.3.45191: Flags [F.], seq 3554306572, ack 99758375, win 243, options [nop,nop,TS val 4968049 ecr 4947372], length 0
+OFPT_PACKET_IN (xid=0x0): total_len=66 in_port=1 data_len=66 buffer=0x000166b2
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:10->00:00:00:00:00:22 type0800 proto6 tos0 ttl64 ip10.0.0.10->10.0.0.22 port51581->12865
+00:00:00:00:00:10 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 66: 10.0.0.10.51581 > 10.0.0.22.12865: Flags [F.], seq 1338038891, ack 2287879286, win 245, options [nop,nop,TS val 4968059 ecr 4968032], length 0
+OFPT_FLOW_MOD (xid=0x76d98): ADD priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:03,nw_src=10.0.0.22,nw_dst=10.0.0.3,nw_tos=0,tp_src=12865,tp_dst=45191 idle:5 buf:0x166b1 flags:0x1 actions=output:1
+OFPT_FLOW_MOD (xid=0x76d9b): ADD priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:10,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.10,nw_dst=10.0.0.22,nw_tos=0,tp_src=51581,tp_dst=12865 idle:5 buf:0x166b2 flags:0x1 actions=output:3
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=1 data_len=42 buffer=0x000166b3
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:02->ff:ff:ff:ff:ff:ff type0806 proto1 tos0 ttl0 ip10.0.0.2->10.0.0.21 arp_ha00:00:00:00:00:02->00:00:00:00:00:00
+00:00:00:00:00:02 > ff:ff:ff:ff:ff:ff, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.21 tell 10.0.0.2, length 28
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=1 data_len=42 buffer=0x000166b4
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:32->00:00:00:00:00:22 type0806 proto2 tos0 ttl0 ip10.0.0.32->10.0.0.22 arp_ha00:00:00:00:00:32->00:00:00:00:00:22
+00:00:00:00:00:32 > 00:00:00:00:00:22, ethertype ARP (0x0806), length 42: Reply 10.0.0.32 is-at 00:00:00:00:00:32, length 28
+OFPT_PACKET_IN (xid=0x0): total_len=66 in_port=1 data_len=66 buffer=0x000166b5
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:04->00:00:00:00:00:22 type0800 proto6 tos0 ttl64 ip10.0.0.4->10.0.0.22 port45948->12865
+00:00:00:00:00:04 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 66: 10.0.0.4.45948 > 10.0.0.22.12865: Flags [F.], seq 3646465198, ack 953517717, win 245, options [nop,nop,TS val 4968066 ecr 4968038], length 0
+OFPT_PACKET_OUT (xid=0x76da0): in_port=1 actions_len=8 actions=FLOOD buffer=0x000166b3
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=2 data_len=42 buffer=0x000166b6
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:21->00:00:00:00:00:02 type0806 proto2 tos0 ttl0 ip10.0.0.21->10.0.0.2 arp_ha00:00:00:00:00:21->00:00:00:00:00:02
+00:00:00:00:00:21 > 00:00:00:00:00:02, ethertype ARP (0x0806), length 42: Reply 10.0.0.21 is-at 00:00:00:00:00:21, length 28
+OFPT_FLOW_MOD (xid=0x76da1): ADD priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:32,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.32,nw_dst=10.0.0.22,arp_op=2 idle:5 buf:0x166b4 flags:0x1 actions=output:3
+OFPT_FLOW_MOD (xid=0x76da2): ADD priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:04,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.4,nw_dst=10.0.0.22,nw_tos=0,tp_src=45948,tp_dst=12865 idle:5 buf:0x166b5 flags:0x1 actions=output:3
+OFPT_PACKET_IN (xid=0x0): total_len=66 in_port=3 data_len=66 buffer=0x000166b7
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:22->00:00:00:00:00:32 type0800 proto6 tos0 ttl64 ip10.0.0.22->10.0.0.32 port12865->36474
+00:00:00:00:00:22 > 00:00:00:00:00:32, ethertype IPv4 (0x0800), length 66: 10.0.0.22.12865 > 10.0.0.32.36474: Flags [F.], seq 426825349, ack 1408889698, win 243, options [nop,nop,TS val 4968059 ecr 4947415], length 0
+OFPT_FLOW_MOD (xid=0x76da6): ADD priority=65535,arp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:21,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.21,nw_dst=10.0.0.2,arp_op=2 idle:5 buf:0x166b6 flags:0x1 actions=output:1
+OFPT_FLOW_MOD (xid=0x76da7): ADD priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:32,nw_src=10.0.0.22,nw_dst=10.0.0.32,nw_tos=0,tp_src=12865,tp_dst=36474 idle:5 buf:0x166b7 flags:0x1 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=1 data_len=42 buffer=0x000166b8
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:02->ff:ff:ff:ff:ff:ff type0806 proto1 tos0 ttl0 ip10.0.0.2->10.0.0.24 arp_ha00:00:00:00:00:02->00:00:00:00:00:00
+00:00:00:00:00:02 > ff:ff:ff:ff:ff:ff, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.24 tell 10.0.0.2, length 28
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=3 data_len=42 buffer=0x000166b9
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:22->ff:ff:ff:ff:ff:ff type0806 proto1 tos0 ttl0 ip10.0.0.22->10.0.0.9 arp_ha00:00:00:00:00:22->00:00:00:00:00:00
+00:00:00:00:00:22 > ff:ff:ff:ff:ff:ff, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.9 tell 10.0.0.22, length 28
+OFPT_PACKET_OUT (xid=0x76daf): in_port=1 actions_len=8 actions=FLOOD buffer=0x000166b8
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=5 data_len=42 buffer=0x000166ba
+priority0:tunnel0:in_port0005:tci(0) mac00:00:00:00:00:24->00:00:00:00:00:02 type0806 proto2 tos0 ttl0 ip10.0.0.24->10.0.0.2 arp_ha00:00:00:00:00:24->00:00:00:00:00:02
+00:00:00:00:00:24 > 00:00:00:00:00:02, ethertype ARP (0x0806), length 42: Reply 10.0.0.24 is-at 00:00:00:00:00:24, length 28
+OFPT_PACKET_OUT (xid=0x76db4): in_port=3 actions_len=8 actions=FLOOD buffer=0x000166b9
+OFPT_FLOW_MOD (xid=0x76db5): ADD priority=65535,arp,in_port=5,vlan_tci=0x0000,dl_src=00:00:00:00:00:24,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.24,nw_dst=10.0.0.2,arp_op=2 idle:5 buf:0x166ba flags:0x1 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=66 in_port=1 data_len=66 buffer=0x000166bb
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:03->00:00:00:00:00:22 type0800 proto6 tos0 ttl64 ip10.0.0.3->10.0.0.22 port45191->12865
+00:00:00:00:00:03 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 66: 10.0.0.3.45191 > 10.0.0.22.12865: Flags [F.], seq 99758375, ack 3554306573, win 245, options [nop,nop,TS val 4968083 ecr 4968049], length 0
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=3 data_len=42 buffer=0x000166bc
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:22->ff:ff:ff:ff:ff:ff type0806 proto1 tos0 ttl0 ip10.0.0.22->10.0.0.8 arp_ha00:00:00:00:00:22->00:00:00:00:00:00
+00:00:00:00:00:22 > ff:ff:ff:ff:ff:ff, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.8 tell 10.0.0.22, length 28
+OFPT_FLOW_MOD (xid=0x76dc2): ADD priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:03,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.3,nw_dst=10.0.0.22,nw_tos=0,tp_src=45191,tp_dst=12865 idle:5 buf:0x166bb flags:0x1 actions=output:3
+OFPT_PACKET_OUT (xid=0x76dc6): in_port=3 actions_len=8 actions=FLOOD buffer=0x000166bc
+OFPT_PACKET_IN (xid=0x0): total_len=66 in_port=1 data_len=66 buffer=0x000166bd
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:32->00:00:00:00:00:22 type0800 proto6 tos0 ttl64 ip10.0.0.32->10.0.0.22 port36474->12865
+00:00:00:00:00:32 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 66: 10.0.0.32.36474 > 10.0.0.22.12865: Flags [F.], seq 1408889698, ack 426825350, win 245, options [nop,nop,TS val 4968088 ecr 4968059], length 0
+OFPT_PACKET_IN (xid=0x0): total_len=66 in_port=1 data_len=66 buffer=0x000166be
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:02->00:00:00:00:00:21 type0800 proto6 tos0 ttl64 ip10.0.0.2->10.0.0.21 port12865->53412
+00:00:00:00:00:02 > 00:00:00:00:00:21, ethertype IPv4 (0x0800), length 66: 10.0.0.2.12865 > 10.0.0.21.53412: Flags [F.], seq 41914083, ack 4057182764, win 243, options [nop,nop,TS val 4968066 ecr 4947781], length 0
+OFPT_FLOW_MOD (xid=0x76dce): ADD priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:32,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.32,nw_dst=10.0.0.22,nw_tos=0,tp_src=36474,tp_dst=12865 idle:5 buf:0x166bd flags:0x1 actions=output:3
+OFPT_FLOW_MOD (xid=0x76dd1): ADD priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:21,nw_src=10.0.0.2,nw_dst=10.0.0.21,nw_tos=0,tp_src=12865,tp_dst=53412 idle:5 buf:0x166be flags:0x1 actions=output:2
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=3 data_len=42 buffer=0x000166bf
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:22->ff:ff:ff:ff:ff:ff type0806 proto1 tos0 ttl0 ip10.0.0.22->10.0.0.6 arp_ha00:00:00:00:00:22->00:00:00:00:00:00
+00:00:00:00:00:22 > ff:ff:ff:ff:ff:ff, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.6 tell 10.0.0.22, length 28
+OFPT_PACKET_IN (xid=0x0): total_len=66 in_port=1 data_len=66 buffer=0x000166c0
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:02->00:00:00:00:00:24 type0800 proto6 tos0 ttl64 ip10.0.0.2->10.0.0.24 port12865->59108
+00:00:00:00:00:02 > 00:00:00:00:00:24, ethertype IPv4 (0x0800), length 66: 10.0.0.2.12865 > 10.0.0.24.59108: Flags [F.], seq 3104977159, ack 1487496496, win 243, options [nop,nop,TS val 4968074 ecr 4947781], length 0
+OFPT_PACKET_OUT (xid=0x76dd9): in_port=3 actions_len=8 actions=FLOOD buffer=0x000166bf
+OFPT_FLOW_MOD (xid=0x76ddd): ADD priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:24,nw_src=10.0.0.2,nw_dst=10.0.0.24,nw_tos=0,tp_src=12865,tp_dst=59108 idle:5 buf:0x166c0 flags:0x1 actions=output:5
+OFPT_PACKET_IN (xid=0x0): total_len=66 in_port=2 data_len=66 buffer=0x000166c1
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:21->00:00:00:00:00:02 type0800 proto6 tos0 ttl64 ip10.0.0.21->10.0.0.2 port53412->12865
+00:00:00:00:00:21 > 00:00:00:00:00:02, ethertype IPv4 (0x0800), length 66: 10.0.0.21.53412 > 10.0.0.2.12865: Flags [.], ack 41914084, win 245, options [nop,nop,TS val 4968108 ecr 4968066], length 0
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=3 data_len=42 buffer=0x000166c2
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:22->ff:ff:ff:ff:ff:ff type0806 proto1 tos0 ttl0 ip10.0.0.22->10.0.0.2 arp_ha00:00:00:00:00:22->00:00:00:00:00:00
+00:00:00:00:00:22 > ff:ff:ff:ff:ff:ff, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.2 tell 10.0.0.22, length 28
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=1 data_len=42 buffer=0x000166c3
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:09->00:00:00:00:00:22 type0806 proto2 tos0 ttl0 ip10.0.0.9->10.0.0.22 arp_ha00:00:00:00:00:09->00:00:00:00:00:22
+00:00:00:00:00:09 > 00:00:00:00:00:22, ethertype ARP (0x0806), length 42: Reply 10.0.0.9 is-at 00:00:00:00:00:09, length 28
+OFPT_FLOW_MOD (xid=0x76de3): ADD priority=65535,tcp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:21,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.21,nw_dst=10.0.0.2,nw_tos=0,tp_src=53412,tp_dst=12865 idle:5 buf:0x166c1 flags:0x1 actions=output:1
+OFPT_PACKET_OUT (xid=0x76de4): in_port=3 actions_len=8 actions=FLOOD buffer=0x000166c2
+OFPT_FLOW_MOD (xid=0x76de5): ADD priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:09,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.9,nw_dst=10.0.0.22,arp_op=2 idle:5 buf:0x166c3 flags:0x1 actions=output:3
+OFPT_PACKET_IN (xid=0x0): total_len=66 in_port=3 data_len=66 buffer=0x000166c4
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:22->00:00:00:00:00:09 type0800 proto6 tos0 ttl64 ip10.0.0.22->10.0.0.9 port12865->36893
+00:00:00:00:00:22 > 00:00:00:00:00:09, ethertype IPv4 (0x0800), length 66: 10.0.0.22.12865 > 10.0.0.9.36893: Flags [F.], seq 4096234000, ack 3935593704, win 243, options [nop,nop,TS val 4968083 ecr 4948160], length 0
+OFPT_FLOW_MOD (xid=0x76dea): ADD priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:09,nw_src=10.0.0.22,nw_dst=10.0.0.9,nw_tos=0,tp_src=12865,tp_dst=36893 idle:5 buf:0x166c4 flags:0x1 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=66 in_port=5 data_len=66 buffer=0x000166c5
+priority0:tunnel0:in_port0005:tci(0) mac00:00:00:00:00:24->00:00:00:00:00:02 type0800 proto6 tos0 ttl64 ip10.0.0.24->10.0.0.2 port59108->12865
+00:00:00:00:00:24 > 00:00:00:00:00:02, ethertype IPv4 (0x0800), length 66: 10.0.0.24.59108 > 10.0.0.2.12865: Flags [.], ack 3104977160, win 245, options [nop,nop,TS val 4968116 ecr 4968074], length 0
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=8,vlan_tci=0x0000,dl_src=00:00:00:00:00:27,dl_dst=00:00:00:00:00:18,nw_src=10.0.0.27,nw_dst=10.0.0.18,nw_tos=0,tp_src=52162,tp_dst=12865 reason=idle duration5.831s idle5 pkts9 bytes1114
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:28,nw_src=10.0.0.2,nw_dst=10.0.0.28,nw_tos=0,tp_src=12865,tp_dst=53474 reason=idle duration6.082s idle5 pkts6 bytes1172
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,udp,in_port=11,vlan_tci=0x0000,dl_src=00:00:00:00:00:30,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.30,nw_dst=10.0.0.2,nw_tos=0,tp_src=41822,tp_dst=46546 reason=idle duration6.051s idle5 pkts4 bytes296
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=8,vlan_tci=0x0000,dl_src=00:00:00:00:00:27,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.27,nw_dst=10.0.0.2,nw_tos=0,tp_src=38081,tp_dst=12865 reason=idle duration6.013s idle5 pkts9 bytes1114
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=11,vlan_tci=0x0000,dl_src=00:00:00:00:00:30,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.30,nw_dst=10.0.0.2,nw_tos=0,tp_src=46587,tp_dst=12865 reason=idle duration6.138s idle5 pkts9 bytes1114
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:27,nw_src=10.0.0.2,nw_dst=10.0.0.27,nw_tos=0,tp_src=34719,tp_dst=44929 reason=idle duration5.876s idle5 pkts1 bytes170
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=8,vlan_tci=0x0000,dl_src=00:00:00:00:00:27,dl_dst=00:00:00:00:00:08,nw_src=10.0.0.27,nw_dst=10.0.0.8,nw_tos=0,tp_src=37037,tp_dst=12865 reason=idle duration5.758s idle5 pkts9 bytes1114
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,udp,in_port=10,vlan_tci=0x0000,dl_src=00:00:00:00:00:29,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.29,nw_dst=10.0.0.2,nw_tos=0,tp_src=60767,tp_dst=52968 reason=idle duration6.106s idle5 pkts4 bytes296
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:18,dl_dst=00:00:00:00:00:27,nw_src=10.0.0.18,nw_dst=10.0.0.27,nw_tos=0,tp_src=42763,tp_dst=47266 reason=idle duration5.799s idle5 pkts155 bytes10238
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=8,vlan_tci=0x0000,dl_src=00:00:00:00:00:27,dl_dst=00:00:00:00:00:18,nw_src=10.0.0.27,nw_dst=10.0.0.18,nw_tos=0,tp_src=47266,tp_dst=42763 reason=idle duration5.812s idle5 pkts297 bytes2034842
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,icmp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:30,nw_src=10.0.0.2,nw_dst=10.0.0.30,nw_tos=0,icmp_type=3,icmp_code=3 reason=idle duration5.896s idle5 pkts1 bytes70
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=8,vlan_tci=0x0000,dl_src=00:00:00:00:00:27,dl_dst=00:00:00:00:00:08,nw_src=10.0.0.27,nw_dst=10.0.0.8,nw_tos=0,tp_src=52791,tp_dst=37634 reason=idle duration5.739s idle5 pkts142 bytes517188
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,icmp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:27,nw_src=10.0.0.2,nw_dst=10.0.0.27,nw_tos=0,icmp_type=3,icmp_code=3 reason=idle duration5.861s idle5 pkts1 bytes70
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:08,dl_dst=00:00:00:00:00:27,nw_src=10.0.0.8,nw_dst=10.0.0.27,nw_tos=0,tp_src=37634,tp_dst=52791 reason=idle duration5.726s idle5 pkts117 bytes7718
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=9,vlan_tci=0x0000,dl_src=00:00:00:00:00:28,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.28,nw_dst=10.0.0.2,nw_tos=0,tp_src=53474,tp_dst=12865 reason=idle duration6.199s idle5 pkts9 bytes1114
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:28,nw_src=10.0.0.2,nw_dst=10.0.0.28,nw_tos=0,tp_src=49007,tp_dst=57621 reason=idle duration5.928s idle5 pkts1 bytes170
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:27,nw_src=10.0.0.2,nw_dst=10.0.0.27,nw_tos=0,tp_src=12865,tp_dst=38081 reason=idle duration5.916s idle5 pkts6 bytes1172
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,icmp,in_port=8,vlan_tci=0x0000,dl_src=00:00:00:00:00:27,dl_dst=00:00:00:00:00:19,nw_src=10.0.0.27,nw_dst=10.0.0.19,nw_tos=0,icmp_type=0,icmp_code=0 reason=idle duration5.898s idle5 pkts1 bytes98
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:18,dl_dst=00:00:00:00:00:27,nw_src=10.0.0.18,nw_dst=10.0.0.27,nw_tos=0,tp_src=12865,tp_dst=52162 reason=idle duration5.817s idle5 pkts6 bytes1172
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:08,dl_dst=00:00:00:00:00:27,nw_src=10.0.0.8,nw_dst=10.0.0.27,nw_tos=0,tp_src=12865,tp_dst=37037 reason=idle duration5.743s idle5 pkts6 bytes1172
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,icmp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:19,dl_dst=00:00:00:00:00:27,nw_src=10.0.0.19,nw_dst=10.0.0.27,nw_tos=0,icmp_type=8,icmp_code=0 reason=idle duration5.907s idle5 pkts1 bytes98
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=10,vlan_tci=0x0000,dl_src=00:00:00:00:00:29,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.29,nw_dst=10.0.0.2,nw_tos=0,tp_src=40781,tp_dst=12865 reason=idle duration6.226s idle5 pkts9 bytes1114
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,udp,in_port=8,vlan_tci=0x0000,dl_src=00:00:00:00:00:27,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.27,nw_dst=10.0.0.2,nw_tos=0,tp_src=44929,tp_dst=34719 reason=idle duration5.898s idle5 pkts4 bytes296
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:29,nw_src=10.0.0.2,nw_dst=10.0.0.29,nw_tos=0,tp_src=12865,tp_dst=40781 reason=idle duration6.133s idle5 pkts6 bytes1172
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:30,nw_src=10.0.0.2,nw_dst=10.0.0.30,nw_tos=0,tp_src=46546,tp_dst=41822 reason=idle duration5.928s idle5 pkts1 bytes170
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,icmp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:29,nw_src=10.0.0.2,nw_dst=10.0.0.29,nw_tos=0,icmp_type=3,icmp_code=3 reason=idle duration5.928s idle5 pkts1 bytes70
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,udp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:29,nw_src=10.0.0.2,nw_dst=10.0.0.29,nw_tos=0,tp_src=52968,tp_dst=60767 reason=idle duration5.975s idle5 pkts1 bytes170
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,icmp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:25,nw_src=10.0.0.2,nw_dst=10.0.0.25,nw_tos=0,icmp_type=3,icmp_code=3 reason=idle duration5.975s idle5 pkts1 bytes70
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:30,nw_src=10.0.0.2,nw_dst=10.0.0.30,nw_tos=0,tp_src=12865,tp_dst=46587 reason=idle duration6.072s idle5 pkts6 bytes1172
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,udp,in_port=9,vlan_tci=0x0000,dl_src=00:00:00:00:00:28,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.28,nw_dst=10.0.0.2,nw_tos=0,tp_src=57621,tp_dst=49007 reason=idle duration6.06s idle5 pkts4 bytes296
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,icmp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:28,nw_src=10.0.0.2,nw_dst=10.0.0.28,nw_tos=0,icmp_type=3,icmp_code=3 reason=idle duration5.896s idle5 pkts1 bytes70
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:18,dl_dst=00:00:00:00:00:27,nw_src=10.0.0.18,nw_dst=10.0.0.27,arp_op=2 reason=idle duration5.834s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:08,dl_dst=00:00:00:00:00:27,nw_src=10.0.0.8,nw_dst=10.0.0.27,arp_op=2 reason=idle duration5.759s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=8,vlan_tci=0x0000,dl_src=00:00:00:00:00:27,dl_dst=00:00:00:00:00:19,nw_src=10.0.0.27,nw_dst=10.0.0.19,arp_op=2 reason=idle duration5.954s idle5 pkts1 bytes42
+OFPT_FLOW_MOD (xid=0x76df0): ADD priority=65535,tcp,in_port=5,vlan_tci=0x0000,dl_src=00:00:00:00:00:24,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.24,nw_dst=10.0.0.2,nw_tos=0,tp_src=59108,tp_dst=12865 idle:5 buf:0x166c5 flags:0x1 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=1 data_len=42 buffer=0x000166c6
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:08->00:00:00:00:00:22 type0806 proto2 tos0 ttl0 ip10.0.0.8->10.0.0.22 arp_ha00:00:00:00:00:08->00:00:00:00:00:22
+00:00:00:00:00:08 > 00:00:00:00:00:22, ethertype ARP (0x0806), length 42: Reply 10.0.0.8 is-at 00:00:00:00:00:08, length 28
+OFPT_FLOW_MOD (xid=0x76df7): ADD priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:08,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.8,nw_dst=10.0.0.22,arp_op=2 idle:5 buf:0x166c6 flags:0x1 actions=output:3
+OFPT_PACKET_IN (xid=0x0): total_len=66 in_port=3 data_len=66 buffer=0x000166c7
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:22->00:00:00:00:00:08 type0800 proto6 tos0 ttl64 ip10.0.0.22->10.0.0.8 port12865->36110
+00:00:00:00:00:22 > 00:00:00:00:00:08, ethertype IPv4 (0x0800), length 66: 10.0.0.22.12865 > 10.0.0.8.36110: Flags [F.], seq 3310444988, ack 2513872111, win 243, options [nop,nop,TS val 4968093 ecr 4949072], length 0
+OFPT_FLOW_MOD (xid=0x76e00): ADD priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:08,nw_src=10.0.0.22,nw_dst=10.0.0.8,nw_tos=0,tp_src=12865,tp_dst=36110 idle:5 buf:0x166c7 flags:0x1 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=1 data_len=42 buffer=0x000166c8
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:06->00:00:00:00:00:22 type0806 proto2 tos0 ttl0 ip10.0.0.6->10.0.0.22 arp_ha00:00:00:00:00:06->00:00:00:00:00:22
+00:00:00:00:00:06 > 00:00:00:00:00:22, ethertype ARP (0x0806), length 42: Reply 10.0.0.6 is-at 00:00:00:00:00:06, length 28
+OFPT_PACKET_IN (xid=0x0): total_len=66 in_port=1 data_len=66 buffer=0x000166c9
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:02->00:00:00:00:00:22 type0800 proto6 tos0 ttl64 ip10.0.0.2->10.0.0.22 port12865->53397
+00:00:00:00:00:02 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 66: 10.0.0.2.12865 > 10.0.0.22.53397: Flags [F.], seq 2619266336, ack 848009896, win 243, options [nop,nop,TS val 4968116 ecr 4958963], length 0
+OFPT_FLOW_MOD (xid=0x76e09): ADD priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:06,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.6,nw_dst=10.0.0.22,arp_op=2 idle:5 buf:0x166c8 flags:0x1 actions=output:3
+OFPT_FLOW_MOD (xid=0x76e0a): ADD priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.2,nw_dst=10.0.0.22,nw_tos=0,tp_src=12865,tp_dst=53397 idle:5 buf:0x166c9 flags:0x1 actions=output:3
+OFPT_PACKET_IN (xid=0x0): total_len=66 in_port=3 data_len=66 buffer=0x000166ca
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:22->00:00:00:00:00:06 type0800 proto6 tos0 ttl64 ip10.0.0.22->10.0.0.6 port12865->43308
+00:00:00:00:00:22 > 00:00:00:00:00:06, ethertype IPv4 (0x0800), length 66: 10.0.0.22.12865 > 10.0.0.6.43308: Flags [F.], seq 1285039658, ack 2584962101, win 243, options [nop,nop,TS val 4968102 ecr 4950606], length 0
+OFPT_FLOW_MOD (xid=0x76e0f): ADD priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:06,nw_src=10.0.0.22,nw_dst=10.0.0.6,nw_tos=0,tp_src=12865,tp_dst=43308 idle:5 buf:0x166ca flags:0x1 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=1 data_len=42 buffer=0x000166cb
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:02->00:00:00:00:00:22 type0806 proto2 tos0 ttl0 ip10.0.0.2->10.0.0.22 arp_ha00:00:00:00:00:02->00:00:00:00:00:22
+00:00:00:00:00:02 > 00:00:00:00:00:22, ethertype ARP (0x0806), length 42: Reply 10.0.0.2 is-at 00:00:00:00:00:02, length 28
+OFPT_FLOW_MOD (xid=0x76e1c): ADD priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.2,nw_dst=10.0.0.22,arp_op=2 idle:5 buf:0x166cb flags:0x1 actions=output:3
+OFPT_PACKET_IN (xid=0x0): total_len=66 in_port=3 data_len=66 buffer=0x000166cc
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:22->00:00:00:00:00:02 type0800 proto6 tos0 ttl64 ip10.0.0.22->10.0.0.2 port12865->48328
+00:00:00:00:00:22 > 00:00:00:00:00:02, ethertype IPv4 (0x0800), length 66: 10.0.0.22.12865 > 10.0.0.2.48328: Flags [F.], seq 1052323583, ack 3683232855, win 243, options [nop,nop,TS val 4968107 ecr 4952817], length 0
+OFPT_PACKET_IN (xid=0x0): total_len=66 in_port=1 data_len=66 buffer=0x000166cd
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:08->00:00:00:00:00:22 type0800 proto6 tos0 ttl64 ip10.0.0.8->10.0.0.22 port36110->12865
+00:00:00:00:00:08 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 66: 10.0.0.8.36110 > 10.0.0.22.12865: Flags [F.], seq 2513872111, ack 3310444989, win 245, options [nop,nop,TS val 4968134 ecr 4968093], length 0
+OFPT_FLOW_MOD (xid=0x76e22): ADD priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.22,nw_dst=10.0.0.2,nw_tos=0,tp_src=12865,tp_dst=48328 idle:5 buf:0x166cc flags:0x1 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=66 in_port=1 data_len=66 buffer=0x000166ce
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:09->00:00:00:00:00:22 type0800 proto6 tos0 ttl64 ip10.0.0.9->10.0.0.22 port36893->12865
+00:00:00:00:00:09 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 66: 10.0.0.9.36893 > 10.0.0.22.12865: Flags [F.], seq 3935593704, ack 4096234001, win 245, options [nop,nop,TS val 4968134 ecr 4968083], length 0
+OFPT_FLOW_MOD (xid=0x76e23): ADD priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:08,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.8,nw_dst=10.0.0.22,nw_tos=0,tp_src=36110,tp_dst=12865 idle:5 buf:0x166cd flags:0x1 actions=output:3
+OFPT_PACKET_IN (xid=0x0): total_len=66 in_port=3 data_len=66 buffer=0x000166cf
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:22->00:00:00:00:00:02 type0800 proto6 tos0 ttl64 ip10.0.0.22->10.0.0.2 port53397->12865
+00:00:00:00:00:22 > 00:00:00:00:00:02, ethertype IPv4 (0x0800), length 66: 10.0.0.22.53397 > 10.0.0.2.12865: Flags [.], ack 2619266337, win 254, options [nop,nop,TS val 4968141 ecr 4968116], length 0
+OFPT_FLOW_MOD (xid=0x76e25): ADD priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:09,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.9,nw_dst=10.0.0.22,nw_tos=0,tp_src=36893,tp_dst=12865 idle:5 buf:0x166ce flags:0x1 actions=output:3
+OFPT_FLOW_MOD (xid=0x76e27): ADD priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.22,nw_dst=10.0.0.2,nw_tos=0,tp_src=53397,tp_dst=12865 idle:5 buf:0x166cf flags:0x1 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=66 in_port=1 data_len=66 buffer=0x000166d0
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:06->00:00:00:00:00:22 type0800 proto6 tos0 ttl64 ip10.0.0.6->10.0.0.22 port43308->12865
+00:00:00:00:00:06 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 66: 10.0.0.6.43308 > 10.0.0.22.12865: Flags [F.], seq 2584962101, ack 1285039659, win 245, options [nop,nop,TS val 4968140 ecr 4968102], length 0
+OFPT_FLOW_MOD (xid=0x76e31): ADD priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:06,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.6,nw_dst=10.0.0.22,nw_tos=0,tp_src=43308,tp_dst=12865 idle:5 buf:0x166d0 flags:0x1 actions=output:3
+OFPT_PACKET_IN (xid=0x0): total_len=66 in_port=1 data_len=66 buffer=0x000166d1
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:02->00:00:00:00:00:22 type0800 proto6 tos0 ttl64 ip10.0.0.2->10.0.0.22 port48328->12865
+00:00:00:00:00:02 > 00:00:00:00:00:22, ethertype IPv4 (0x0800), length 66: 10.0.0.2.48328 > 10.0.0.22.12865: Flags [F.], seq 3683232855, ack 1052323584, win 245, options [nop,nop,TS val 4968149 ecr 4968107], length 0
+OFPT_FLOW_MOD (xid=0x76e37): ADD priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.2,nw_dst=10.0.0.22,nw_tos=0,tp_src=48328,tp_dst=12865 idle:5 buf:0x166d1 flags:0x1 actions=output:3
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=3 data_len=54 buffer=0x000166d2
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:22->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.22->224.0.0.22
+00:00:00:00:00:22 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.22 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x76e38): in_port=3 actions_len=8 actions=FLOOD buffer=0x000166d2
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=4,vlan_tci=0x0000,dl_src=00:00:00:00:00:23,dl_dst=00:00:00:00:00:18,nw_src=10.0.0.23,nw_dst=10.0.0.18,arp_op=2 reason=idle duration5.909s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:18,dl_dst=00:00:00:00:00:23,nw_src=10.0.0.18,nw_dst=10.0.0.23,arp_op=1 reason=idle duration5.921s idle5 pkts1 bytes42
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x000166d3
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:14->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.14->224.0.0.22
+00:00:00:00:00:14 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.14 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x76e44): in_port=1 actions_len=8 actions=FLOOD buffer=0x000166d3
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x000166d4
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:10->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.10->224.0.0.22
+00:00:00:00:00:10 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.10 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x76e4b): in_port=1 actions_len=8 actions=FLOOD buffer=0x000166d4
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x000166d5
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:19->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.19->224.0.0.22
+00:00:00:00:00:19 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.19 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x76e52): in_port=1 actions_len=8 actions=FLOOD buffer=0x000166d5
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x000166d6
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:37->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.37->224.0.0.22
+00:00:00:00:00:37 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.37 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x76e56): in_port=1 actions_len=8 actions=FLOOD buffer=0x000166d6
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=4,vlan_tci=0x0000,dl_src=00:00:00:00:00:23,dl_dst=00:00:00:00:00:28,nw_src=10.0.0.23,nw_dst=10.0.0.28,arp_op=1 reason=idle duration5.113s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:06,dl_dst=00:00:00:00:00:29,nw_src=10.0.0.6,nw_dst=10.0.0.29,arp_op=1 reason=idle duration5.184s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=7,vlan_tci=0x0000,dl_src=00:00:00:00:00:26,dl_dst=00:00:00:00:00:17,nw_src=10.0.0.26,nw_dst=10.0.0.17,arp_op=1 reason=idle duration5.049s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:17,dl_dst=00:00:00:00:00:26,nw_src=10.0.0.17,nw_dst=10.0.0.26,arp_op=2 reason=idle duration5.002s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:06,dl_dst=00:00:00:00:00:30,nw_src=10.0.0.6,nw_dst=10.0.0.30,arp_op=1 reason=idle duration5.047s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=11,vlan_tci=0x0000,dl_src=00:00:00:00:00:30,dl_dst=00:00:00:00:00:06,nw_src=10.0.0.30,nw_dst=10.0.0.6,arp_op=2 reason=idle duration5.046s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=9,vlan_tci=0x0000,dl_src=00:00:00:00:00:28,dl_dst=00:00:00:00:00:38,nw_src=10.0.0.28,nw_dst=10.0.0.38,arp_op=1 reason=idle duration5.082s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=9,vlan_tci=0x0000,dl_src=00:00:00:00:00:28,dl_dst=00:00:00:00:00:23,nw_src=10.0.0.28,nw_dst=10.0.0.23,arp_op=2 reason=idle duration5.107s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=11,vlan_tci=0x0000,dl_src=00:00:00:00:00:30,dl_dst=00:00:00:00:00:39,nw_src=10.0.0.30,nw_dst=10.0.0.39,arp_op=1 reason=idle duration5.156s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:39,dl_dst=00:00:00:00:00:30,nw_src=10.0.0.39,nw_dst=10.0.0.30,arp_op=2 reason=idle duration5.115s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=10,vlan_tci=0x0000,dl_src=00:00:00:00:00:29,dl_dst=00:00:00:00:00:06,nw_src=10.0.0.29,nw_dst=10.0.0.6,arp_op=2 reason=idle duration5.183s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:38,dl_dst=00:00:00:00:00:28,nw_src=10.0.0.38,nw_dst=10.0.0.28,arp_op=2 reason=idle duration5.036s idle5 pkts1 bytes42
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x000166d7
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:20->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.20->224.0.0.22
+00:00:00:00:00:20 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.20 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x76e60): in_port=1 actions_len=8 actions=FLOOD buffer=0x000166d7
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x000166d8
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:35->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.35->224.0.0.22
+00:00:00:00:00:35 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.35 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x76e64): in_port=1 actions_len=8 actions=FLOOD buffer=0x000166d8
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x000166d9
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:34->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.34->224.0.0.22
+00:00:00:00:00:34 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.34 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x76e6b): in_port=1 actions_len=8 actions=FLOOD buffer=0x000166d9
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=6,vlan_tci=0x0000,dl_src=00:00:00:00:00:25,dl_dst=00:00:00:00:00:16,nw_src=10.0.0.25,nw_dst=10.0.0.16,arp_op=1 reason=idle duration5.346s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:21,dl_dst=00:00:00:00:00:40,nw_src=10.0.0.21,nw_dst=10.0.0.40,arp_op=1 reason=idle duration5.071s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:40,dl_dst=00:00:00:00:00:21,nw_src=10.0.0.40,nw_dst=10.0.0.21,arp_op=2 reason=idle duration5.052s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:36,dl_dst=00:00:00:00:00:21,nw_src=10.0.0.36,nw_dst=10.0.0.21,arp_op=2 reason=idle duration5.514s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:21,dl_dst=00:00:00:00:00:36,nw_src=10.0.0.21,nw_dst=10.0.0.36,arp_op=1 reason=idle duration5.55s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:16,dl_dst=00:00:00:00:00:25,nw_src=10.0.0.16,nw_dst=10.0.0.25,arp_op=2 reason=idle duration5.299s idle5 pkts1 bytes42
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x000165da
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:08->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.8->224.0.0.22
+00:00:00:00:00:08 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.8 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x000165db
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:17->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.17->224.0.0.22
+00:00:00:00:00:17 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.17 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x76e79): in_port=1 actions_len=8 actions=FLOOD buffer=0x000165da
+OFPT_PACKET_OUT (xid=0x76e7c): in_port=1 actions_len=8 actions=FLOOD buffer=0x000165db
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=2 data_len=42 buffer=0x000165dc
+priority0:tunnel0:in_port0002:tci(0) mac00:00:00:00:00:21->00:00:00:00:00:02 type0806 proto1 tos0 ttl0 ip10.0.0.21->10.0.0.2 arp_ha00:00:00:00:00:21->00:00:00:00:00:00
+00:00:00:00:00:21 > 00:00:00:00:00:02, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.2 tell 10.0.0.21, length 28
+OFPT_FLOW_MOD (xid=0x76e7e): ADD priority=65535,arp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:21,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.21,nw_dst=10.0.0.2,arp_op=1 idle:5 buf:0x165dc flags:0x1 actions=output:1
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:12,nw_src=10.0.0.22,nw_dst=10.0.0.12,nw_tos=0,tp_src=12865,tp_dst=42679 reason=idle duration5.339s idle5 pkts2 bytes132
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:04,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.4,nw_dst=10.0.0.22,nw_tos=0,tp_src=45948,tp_dst=12865 reason=idle duration5.152s idle5 pkts1 bytes66
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:04,nw_src=10.0.0.22,nw_dst=10.0.0.4,nw_tos=0,tp_src=12865,tp_dst=45948 reason=idle duration5.242s idle5 pkts2 bytes132
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:32,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.32,nw_dst=10.0.0.22,nw_tos=0,tp_src=36474,tp_dst=12865 reason=idle duration5.073s idle5 pkts1 bytes66
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:10,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.10,nw_dst=10.0.0.22,nw_tos=0,tp_src=51581,tp_dst=12865 reason=idle duration5.174s idle5 pkts1 bytes66
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:03,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.3,nw_dst=10.0.0.22,nw_tos=0,tp_src=45191,tp_dst=12865 reason=idle duration5.086s idle5 pkts1 bytes66
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:03,nw_src=10.0.0.22,nw_dst=10.0.0.3,nw_tos=0,tp_src=12865,tp_dst=45191 reason=idle duration5.174s idle5 pkts2 bytes132
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:32,nw_src=10.0.0.22,nw_dst=10.0.0.32,nw_tos=0,tp_src=12865,tp_dst=36474 reason=idle duration5.151s idle5 pkts2 bytes132
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:12,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.12,nw_dst=10.0.0.22,nw_tos=0,tp_src=42679,tp_dst=12865 reason=idle duration5.277s idle5 pkts1 bytes66
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:10,nw_src=10.0.0.22,nw_dst=10.0.0.10,nw_tos=0,tp_src=12865,tp_dst=51581 reason=idle duration5.262s idle5 pkts2 bytes132
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:12,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.12,nw_dst=10.0.0.22,arp_op=2 reason=idle duration5.347s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:03,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.3,nw_dst=10.0.0.22,arp_op=2 reason=idle duration5.19s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:09,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.9,nw_dst=10.0.0.22,arp_op=2 reason=idle duration5.019s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:10,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.10,nw_dst=10.0.0.22,arp_op=2 reason=idle duration5.272s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:21,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.21,nw_dst=10.0.0.2,arp_op=2 reason=idle duration5.151s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:04,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.4,nw_dst=10.0.0.22,arp_op=2 reason=idle duration5.254s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=8,vlan_tci=0x0000,dl_src=00:00:00:00:00:27,dl_dst=00:00:00:00:00:19,nw_src=10.0.0.27,nw_dst=10.0.0.19,arp_op=1 reason=idle duration5.912s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:32,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.32,nw_dst=10.0.0.22,arp_op=2 reason=idle duration5.152s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:19,dl_dst=00:00:00:00:00:27,nw_src=10.0.0.19,nw_dst=10.0.0.27,arp_op=2 reason=idle duration5.894s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=5,vlan_tci=0x0000,dl_src=00:00:00:00:00:24,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.24,nw_dst=10.0.0.2,arp_op=2 reason=idle duration5.116s idle5 pkts1 bytes42
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=5 data_len=42 buffer=0x000165dd
+priority0:tunnel0:in_port0005:tci(0) mac00:00:00:00:00:24->00:00:00:00:00:02 type0806 proto1 tos0 ttl0 ip10.0.0.24->10.0.0.2 arp_ha00:00:00:00:00:24->00:00:00:00:00:00
+00:00:00:00:00:24 > 00:00:00:00:00:02, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.2 tell 10.0.0.24, length 28
+OFPT_FLOW_MOD (xid=0x76e86): ADD priority=65535,arp,in_port=5,vlan_tci=0x0000,dl_src=00:00:00:00:00:24,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.24,nw_dst=10.0.0.2,arp_op=1 idle:5 buf:0x165dd flags:0x1 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=1 data_len=42 buffer=0x000165de
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:02->00:00:00:00:00:21 type0806 proto2 tos0 ttl0 ip10.0.0.2->10.0.0.21 arp_ha00:00:00:00:00:02->00:00:00:00:00:21
+00:00:00:00:00:02 > 00:00:00:00:00:21, ethertype ARP (0x0806), length 42: Reply 10.0.0.2 is-at 00:00:00:00:00:02, length 28
+OFPT_FLOW_MOD (xid=0x76e89): ADD priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:21,nw_src=10.0.0.2,nw_dst=10.0.0.21,arp_op=2 idle:5 buf:0x165de flags:0x1 actions=output:2
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=1 data_len=42 buffer=0x000165df
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:02->00:00:00:00:00:24 type0806 proto2 tos0 ttl0 ip10.0.0.2->10.0.0.24 arp_ha00:00:00:00:00:02->00:00:00:00:00:24
+00:00:00:00:00:02 > 00:00:00:00:00:24, ethertype ARP (0x0806), length 42: Reply 10.0.0.2 is-at 00:00:00:00:00:02, length 28
+OFPT_FLOW_MOD (xid=0x76e91): ADD priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:24,nw_src=10.0.0.2,nw_dst=10.0.0.24,arp_op=2 idle:5 buf:0x165df flags:0x1 actions=output:5
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=1 data_len=42 buffer=0x000166e0
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:08->00:00:00:00:00:22 type0806 proto1 tos0 ttl0 ip10.0.0.8->10.0.0.22 arp_ha00:00:00:00:00:08->00:00:00:00:00:00
+00:00:00:00:00:08 > 00:00:00:00:00:22, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.22 tell 10.0.0.8, length 28
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=1 data_len=42 buffer=0x000166e1
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:09->00:00:00:00:00:22 type0806 proto1 tos0 ttl0 ip10.0.0.9->10.0.0.22 arp_ha00:00:00:00:00:09->00:00:00:00:00:00
+00:00:00:00:00:09 > 00:00:00:00:00:22, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.22 tell 10.0.0.9, length 28
+OFPT_FLOW_MOD (xid=0x76e9a): ADD priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:08,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.8,nw_dst=10.0.0.22,arp_op=1 idle:5 buf:0x166e0 flags:0x1 actions=output:3
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=3 data_len=42 buffer=0x000166e2
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:22->00:00:00:00:00:08 type0806 proto2 tos0 ttl0 ip10.0.0.22->10.0.0.8 arp_ha00:00:00:00:00:22->00:00:00:00:00:08
+00:00:00:00:00:22 > 00:00:00:00:00:08, ethertype ARP (0x0806), length 42: Reply 10.0.0.22 is-at 00:00:00:00:00:22, length 28
+OFPT_FLOW_MOD (xid=0x76e9c): ADD priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:09,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.9,nw_dst=10.0.0.22,arp_op=1 idle:5 buf:0x166e1 flags:0x1 actions=output:3
+OFPT_FLOW_MOD (xid=0x76e9e): ADD priority=65535,arp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:08,nw_src=10.0.0.22,nw_dst=10.0.0.8,arp_op=2 idle:5 buf:0x166e2 flags:0x1 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=3 data_len=42 buffer=0x000166e3
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:22->00:00:00:00:00:09 type0806 proto2 tos0 ttl0 ip10.0.0.22->10.0.0.9 arp_ha00:00:00:00:00:22->00:00:00:00:00:09
+00:00:00:00:00:22 > 00:00:00:00:00:09, ethertype ARP (0x0806), length 42: Reply 10.0.0.22 is-at 00:00:00:00:00:22, length 28
+OFPT_FLOW_MOD (xid=0x76ea1): ADD priority=65535,arp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:09,nw_src=10.0.0.22,nw_dst=10.0.0.9,arp_op=2 idle:5 buf:0x166e3 flags:0x1 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=1 data_len=42 buffer=0x000165e4
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:06->00:00:00:00:00:22 type0806 proto1 tos0 ttl0 ip10.0.0.6->10.0.0.22 arp_ha00:00:00:00:00:06->00:00:00:00:00:00
+00:00:00:00:00:06 > 00:00:00:00:00:22, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.22 tell 10.0.0.6, length 28
+OFPT_FLOW_MOD (xid=0x76ea5): ADD priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:06,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.6,nw_dst=10.0.0.22,arp_op=1 idle:5 buf:0x165e4 flags:0x1 actions=output:3
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=3 data_len=42 buffer=0x000165e5
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:22->00:00:00:00:00:06 type0806 proto2 tos0 ttl0 ip10.0.0.22->10.0.0.6 arp_ha00:00:00:00:00:22->00:00:00:00:00:06
+00:00:00:00:00:22 > 00:00:00:00:00:06, ethertype ARP (0x0806), length 42: Reply 10.0.0.22 is-at 00:00:00:00:00:22, length 28
+OFPT_FLOW_MOD (xid=0x76ea9): ADD priority=65535,arp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:06,nw_src=10.0.0.22,nw_dst=10.0.0.6,arp_op=2 idle:5 buf:0x165e5 flags:0x1 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=1 data_len=42 buffer=0x000165e6
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:02->00:00:00:00:00:22 type0806 proto1 tos0 ttl0 ip10.0.0.2->10.0.0.22 arp_ha00:00:00:00:00:02->00:00:00:00:00:00
+00:00:00:00:00:02 > 00:00:00:00:00:22, ethertype ARP (0x0806), length 42: Request who-has 10.0.0.22 tell 10.0.0.2, length 28
+OFPT_FLOW_MOD (xid=0x76eb4): ADD priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.2,nw_dst=10.0.0.22,arp_op=1 idle:5 buf:0x165e6 flags:0x1 actions=output:3
+OFPT_PACKET_IN (xid=0x0): total_len=42 in_port=3 data_len=42 buffer=0x000165e7
+priority0:tunnel0:in_port0003:tci(0) mac00:00:00:00:00:22->00:00:00:00:00:02 type0806 proto2 tos0 ttl0 ip10.0.0.22->10.0.0.2 arp_ha00:00:00:00:00:22->00:00:00:00:00:02
+00:00:00:00:00:22 > 00:00:00:00:00:02, ethertype ARP (0x0806), length 42: Reply 10.0.0.22 is-at 00:00:00:00:00:22, length 28
+OFPT_FLOW_MOD (xid=0x76eb5): ADD priority=65535,arp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.22,nw_dst=10.0.0.2,arp_op=2 idle:5 buf:0x165e7 flags:0x1 actions=output:1
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=9 data_len=54 buffer=0x000165e8
+priority0:tunnel0:in_port0009:tci(0) mac00:00:00:00:00:28->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.28->224.0.0.22
+00:00:00:00:00:28 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.28 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x76eba): in_port=9 actions_len=8 actions=FLOOD buffer=0x000165e8
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:21,nw_src=10.0.0.2,nw_dst=10.0.0.21,nw_tos=0,tp_src=12865,tp_dst=53412 reason=idle duration6.081s idle5 pkts2 bytes132
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=5,vlan_tci=0x0000,dl_src=00:00:00:00:00:24,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.24,nw_dst=10.0.0.2,nw_tos=0,tp_src=59108,tp_dst=12865 reason=idle duration6.02s idle5 pkts2 bytes132
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.2,nw_dst=10.0.0.22,nw_tos=0,tp_src=12865,tp_dst=53397 reason=idle duration5.95s idle5 pkts1 bytes66
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:08,nw_src=10.0.0.22,nw_dst=10.0.0.8,nw_tos=0,tp_src=12865,tp_dst=36110 reason=idle duration5.966s idle5 pkts2 bytes132
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:06,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.6,nw_dst=10.0.0.22,nw_tos=0,tp_src=43308,tp_dst=12865 reason=idle duration5.882s idle5 pkts1 bytes66
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:24,nw_src=10.0.0.2,nw_dst=10.0.0.24,nw_tos=0,tp_src=12865,tp_dst=59108 reason=idle duration6.048s idle5 pkts2 bytes132
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:09,nw_src=10.0.0.22,nw_dst=10.0.0.9,nw_tos=0,tp_src=12865,tp_dst=36893 reason=idle duration6.028s idle5 pkts2 bytes132
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:08,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.8,nw_dst=10.0.0.22,nw_tos=0,tp_src=36110,tp_dst=12865 reason=idle duration5.916s idle5 pkts1 bytes66
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=2,vlan_tci=0x0000,dl_src=00:00:00:00:00:21,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.21,nw_dst=10.0.0.2,nw_tos=0,tp_src=53412,tp_dst=12865 reason=idle duration6.029s idle5 pkts2 bytes132
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.22,nw_dst=10.0.0.2,nw_tos=0,tp_src=12865,tp_dst=48328 reason=idle duration5.916s idle5 pkts2 bytes132
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:09,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.9,nw_dst=10.0.0.22,nw_tos=0,tp_src=36893,tp_dst=12865 reason=idle duration5.902s idle5 pkts1 bytes66
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:06,nw_src=10.0.0.22,nw_dst=10.0.0.6,nw_tos=0,tp_src=12865,tp_dst=43308 reason=idle duration5.939s idle5 pkts2 bytes132
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.2,nw_dst=10.0.0.22,nw_tos=0,tp_src=48328,tp_dst=12865 reason=idle duration5.857s idle5 pkts1 bytes66
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,tcp,in_port=3,vlan_tci=0x0000,dl_src=00:00:00:00:00:22,dl_dst=00:00:00:00:00:02,nw_src=10.0.0.22,nw_dst=10.0.0.2,nw_tos=0,tp_src=53397,tp_dst=12865 reason=idle duration5.902s idle5 pkts2 bytes132
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:08,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.8,nw_dst=10.0.0.22,arp_op=2 reason=idle duration5.97s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:06,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.6,nw_dst=10.0.0.22,arp_op=2 reason=idle duration5.95s idle5 pkts1 bytes42
+OFPT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:22,nw_src=10.0.0.2,nw_dst=10.0.0.22,arp_op=2 reason=idle duration5.917s idle5 pkts1 bytes42
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=1 data_len=54 buffer=0x000165e9
+priority0:tunnel0:in_port0001:tci(0) mac00:00:00:00:00:40->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.40->224.0.0.22
+00:00:00:00:00:40 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.40 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x76ebf): in_port=1 actions_len=8 actions=FLOOD buffer=0x000165e9
+OFPT_PACKET_IN (xid=0x0): total_len=54 in_port=5 data_len=54 buffer=0x000165ea
+priority0:tunnel0:in_port0005:tci(0) mac00:00:00:00:00:24->01:00:5e:00:00:16 type0800 proto2 tos0xc0 ttl1 ip10.0.0.24->224.0.0.22
+00:00:00:00:00:24 > 01:00:5e:00:00:16, ethertype IPv4 (0x0800), length 54: 10.0.0.24 > 224.0.0.22: igmp v3 report, 1 group record(s)
+OFPT_PACKET_OUT (xid=0x76ec0): in_port=5 actions_len=8 actions=FLOOD buffer=0x000165ea
+OFPT_PORT_STATUS (xid=0x0): MOD: 1(gs5_to_gs4): addr:9b:01:00:00:00:00
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+OFPT_PORT_STATUS (xid=0x0): DEL: 1(gs5_to_gs4): addr:9b:01:00:00:00:00
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+OFPT_PORT_STATUS (xid=0x0): MOD: 2(gs5_to_gh21): addr:96:2b:a0:43:47:f4
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): DEL: 2(gs5_to_gh21): addr:96:2b:a0:43:47:f4
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): MOD: 3(gs5_to_gh22): addr:56:32:36:cf:c1:c8
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): DEL: 3(gs5_to_gh22): addr:56:32:36:cf:c1:c8
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): MOD: 4(gs5_to_gh23): addr:8a:9b:44:ab:20:c4
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): DEL: 4(gs5_to_gh23): addr:8a:9b:44:ab:20:c4
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): MOD: 5(gs5_to_gh24): addr:d6:ed:8e:8b:12:85
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): DEL: 5(gs5_to_gh24): addr:d6:ed:8e:8b:12:85
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): MOD: 6(gs5_to_gh25): addr:4a:8d:91:0f:b4:b2
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): DEL: 6(gs5_to_gh25): addr:4a:8d:91:0f:b4:b2
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): MOD: 7(gs5_to_gh26): addr:02:33:94:1c:00:b2
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): DEL: 7(gs5_to_gh26): addr:02:33:94:1c:00:b2
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): MOD: 8(gs5_to_gh27): addr:da:f4:43:d7:6f:ef
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): DEL: 8(gs5_to_gh27): addr:da:f4:43:d7:6f:ef
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): MOD: 9(gs5_to_gh28): addr:fa:15:fb:a0:c2:1a
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): DEL: 9(gs5_to_gh28): addr:fa:15:fb:a0:c2:1a
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): MOD: 10(gs5_to_gh29): addr:d2:ec:15:9c:10:f2
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): DEL: 10(gs5_to_gh29): addr:d2:ec:15:9c:10:f2
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): MOD: 11(gs5_to_gh30): addr:72:8c:1e:71:a7:92
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+OFPT_PORT_STATUS (xid=0x0): DEL: 11(gs5_to_gh30): addr:72:8c:1e:71:a7:92
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     current:    10GB-FD COPPER
+ovs-ofctl: vconn_recv (End of file)

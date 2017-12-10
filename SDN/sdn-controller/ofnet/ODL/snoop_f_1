@@ -1,0 +1,40 @@
+OFPT_PACKET_IN (xid=0x0): total_len=109 in_port=3 (via action) data_len=109 (unbuffered)
+priority0:tunnel0:in_port0003:tci(0) macaa:49:ef:1f:f3:50->01:23:00:00:00:01 type88cc proto0 tos0 ttl0 ip0.0.0.0->0.0.0.0
+aa:49:ef:1f:f3:50 > 01:23:00:00:00:01, ethertype LLDP (0x88cc), length 109: LLDP, name openflow:8796244017157, length 95
+OFPT_FLOW_MOD (xid=0x248): ADD priority=4,dl_src=aa:49:ef:1f:f3:50 cookie:0xa idle:240 hard:300 buf:0x0 actions=drop
+OFPT_ERROR (xid=0x248): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+(***truncated to 64 bytes from 72***)
+00000000  01 0e 00 48 00 00 02 48-00 38 20 fb 00 00 aa 49 |...H...H.8 ....I|
+00000010  ef 1f f3 50 00 00 00 00-00 00 ff ff 00 00 00 00 |...P............|
+00000020  00 00 00 00 00 00 00 00-00 00 00 00 00 00 00 00 |................|
+00000030  00 00 00 00 00 00 00 0a-00 00 00 f0 01 2c 00 04 |.............,..|
+OFPT_PACKET_IN (xid=0x0): total_len=109 in_port=2 (via action) data_len=109 (unbuffered)
+priority0:tunnel0:in_port0002:tci(0) mac36:bf:d3:ac:37:8b->01:23:00:00:00:01 type88cc proto0 tos0 ttl0 ip0.0.0.0->0.0.0.0
+36:bf:d3:ac:37:8b > 01:23:00:00:00:01, ethertype LLDP (0x88cc), length 109: LLDP, name openflow:8796244017158, length 95
+OFPT_FLOW_MOD (xid=0x249): ADD priority=4,dl_src=36:bf:d3:ac:37:8b cookie:0xa idle:240 hard:300 buf:0x0 actions=drop
+OFPT_ERROR (xid=0x249): type OFPET_BAD_REQUEST, code OFPBRC_BUFFER_EMPTY
+(***truncated to 64 bytes from 72***)
+00000000  01 0e 00 48 00 00 02 49-00 38 20 fb 00 00 36 bf |...H...I.8 ...6.|
+00000010  d3 ac 37 8b 00 00 00 00-00 00 ff ff 00 00 00 00 |..7.............|
+00000020  00 00 00 00 00 00 00 00-00 00 00 00 00 00 00 00 |................|
+00000030  00 00 00 00 00 00 00 0a-00 00 00 f0 01 2c 00 04 |.............,..|
+OFPST_FLOW request (xid=0x24a): 
+OFPST_FLOW reply (xid=0x24a):
+ cookie=0x2b0000000000004c, duration=407.306s, table=0, n_packets=277796, n_bytes=487622036, priority=2,in_port=1 actions=output:3,output:2
+ cookie=0x2b0000000000004a, duration=407.306s, table=0, n_packets=81744, n_bytes=106125136, priority=2,in_port=3 actions=output:2,output:1
+ cookie=0x2b0000000000004b, duration=407.306s, table=0, n_packets=64248, n_bytes=61765022, priority=2,in_port=2 actions=output:3,output:1
+ cookie=0x2b00000000000017, duration=413.165s, table=0, n_packets=251, n_bytes=27359, priority=100,dl_type=0x88cc actions=CONTROLLER:65535
+ cookie=0x2b00000000000017, duration=413.165s, table=0, n_packets=0, n_bytes=0, priority=0 actions=drop
+OFPST_PORT request (xid=0x24b): port_no=65535
+OFPST_PORT reply (xid=0x24b): 4 ports
+  port  3: rx pkts=81205, bytes=108775427, drop=0, errs=0, frame=0, over=0, crc=0
+           tx pkts=342544, bytes=549436511, drop=0, errs=0, coll=0
+  port  2: rx pkts=64380, bytes=61780319, drop=0, errs=0, frame=0, over=0, crc=0
+           tx pkts=360047, bytes=593797355, drop=0, errs=0, coll=0
+  port 65534: rx pkts=0, bytes=0, drop=0, errs=0, frame=0, over=0, crc=0
+           tx pkts=212, bytes=27059, drop=0, errs=0, coll=0
+  port  1: rx pkts=278272, bytes=487668724, drop=0, errs=0, frame=0, over=0, crc=0
+           tx pkts=146152, bytes=167908434, drop=0, errs=0, coll=0
+OFPST_QUEUE request (xid=0x24c):port=NONE queue=ALL
+OFPT_ERROR (xid=0x24c): type OFPET_QUEUE_OP_FAILED, code OFPQOFC_BAD_PORT
+OFPST_QUEUE request (xid=0x24c):port=NONE queue=ALL
